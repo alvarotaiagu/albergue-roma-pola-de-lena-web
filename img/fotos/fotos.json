@@ -1,0 +1,454 @@
+[
+ {
+  "nombre": "cocina",
+  "anchos": [
+   480,
+   800,
+   1280
+  ],
+  "ancho": 1280,
+  "alto": 960,
+  "origen": "fotos-booking/bk-470059365.jpg",
+  "recorte": null,
+  "lena": false
+ },
+ {
+  "nombre": "litera",
+  "anchos": [
+   480,
+   800,
+   1280
+  ],
+  "ancho": 1280,
+  "alto": 960,
+  "origen": "fotos-booking/bk-470115465.jpg",
+  "recorte": null,
+  "lena": false
+ },
+ {
+  "nombre": "dormitorio-grande",
+  "anchos": [
+   480,
+   800,
+   1280
+  ],
+  "ancho": 1280,
+  "alto": 960,
+  "origen": "fotos-booking/bk-470115472.jpg",
+  "recorte": null,
+  "lena": false
+ },
+ {
+  "nombre": "bano-1",
+  "anchos": [
+   480,
+   800,
+   1280
+  ],
+  "ancho": 1280,
+  "alto": 1707,
+  "origen": "fotos-booking/bk-470115480.jpg",
+  "recorte": null,
+  "lena": false
+ },
+ {
+  "nombre": "bano-2",
+  "anchos": [
+   480,
+   800,
+   1280
+  ],
+  "ancho": 1280,
+  "alto": 960,
+  "origen": "fotos-booking/bk-470115487.jpg",
+  "recorte": null,
+  "lena": false
+ },
+ {
+  "nombre": "dormitorio-focos",
+  "anchos": [
+   480,
+   800,
+   1280
+  ],
+  "ancho": 1280,
+  "alto": 960,
+  "origen": "fotos-booking/bk-470115493.jpg",
+  "recorte": null,
+  "lena": false
+ },
+ {
+  "nombre": "dormitorio-taquillas",
+  "anchos": [
+   480,
+   800,
+   1280
+  ],
+  "ancho": 1280,
+  "alto": 960,
+  "origen": "fotos-booking/bk-470115499.jpg",
+  "recorte": null,
+  "lena": false
+ },
+ {
+  "nombre": "cartel-carabanzo",
+  "anchos": [
+   480,
+   800,
+   1280
+  ],
+  "ancho": 1280,
+  "alto": 960,
+  "origen": "fotos-booking/bk-470115509.jpg",
+  "recorte": null,
+  "lena": false
+ },
+ {
+  "nombre": "bano-3",
+  "anchos": [
+   480,
+   800,
+   1280
+  ],
+  "ancho": 1280,
+  "alto": 960,
+  "origen": "fotos-booking/bk-470115514.jpg",
+  "recorte": null,
+  "lena": false
+ },
+ {
+  "nombre": "habitacion-dos-camas",
+  "anchos": [
+   480,
+   800,
+   1254
+  ],
+  "ancho": 1254,
+  "alto": 1254,
+  "origen": "fotos-booking/bk-891261746.jpg",
+  "recorte": null,
+  "lena": false
+ },
+ {
+  "nombre": "puerto-ubinas-2",
+  "anchos": [
+   480,
+   800,
+   1280,
+   1920
+  ],
+  "ancho": 1920,
+  "alto": 1280,
+  "origen": "fotos-lena/puerto-ubinas-2.jpg",
+  "recorte": null,
+  "lena": true
+ },
+ {
+  "nombre": "puerto-ubinas-1",
+  "anchos": [
+   480,
+   800,
+   1280,
+   1920
+  ],
+  "ancho": 1920,
+  "alto": 1280,
+  "origen": "fotos-lena/puerto-ubinas-1.jpg",
+  "recorte": null,
+  "lena": true
+ },
+ {
+  "nombre": "bajada-ubinas-1",
+  "anchos": [
+   480,
+   800,
+   1280,
+   1920
+  ],
+  "ancho": 1920,
+  "alto": 1280,
+  "origen": "fotos-lena/bajada-ubinas-1.jpg",
+  "recorte": null,
+  "lena": true
+ },
+ {
+  "nombre": "bajada-ubinas-2",
+  "anchos": [
+   480,
+   800,
+   1280,
+   1920
+  ],
+  "ancho": 1920,
+  "alto": 1280,
+  "origen": "fotos-lena/bajada-ubinas-2.jpg",
+  "recorte": null,
+  "lena": true
+ },
+ {
+  "nombre": "bajada-inicio",
+  "anchos": [
+   480,
+   800,
+   1280,
+   1920
+  ],
+  "ancho": 1920,
+  "alto": 1280,
+  "origen": "fotos-lena/bajada-inicio.jpg",
+  "recorte": null,
+  "lena": true
+ },
+ {
+  "nombre": "bajada-caballos",
+  "anchos": [
+   480,
+   800,
+   1280,
+   1920
+  ],
+  "ancho": 1920,
+  "alto": 1280,
+  "origen": "fotos-lena/bajada-caballos.jpg",
+  "recorte": null,
+  "lena": true
+ },
+ {
+  "nombre": "pajares-arroyo",
+  "anchos": [
+   480,
+   800,
+   1280,
+   1920
+  ],
+  "ancho": 1920,
+  "alto": 1280,
+  "origen": "fotos-lena/pajares-arroyo.jpg",
+  "recorte": null,
+  "lena": true
+ },
+ {
+  "nombre": "pajares-arco-hospital",
+  "anchos": [
+   480,
+   800,
+   1280,
+   1920
+  ],
+  "ancho": 1920,
+  "alto": 1280,
+  "origen": "fotos-lena/pajares-arco-hospital.jpg",
+  "recorte": null,
+  "lena": true
+ },
+ {
+  "nombre": "san-miguel-flecha",
+  "anchos": [
+   480,
+   800,
+   1280,
+   1920
+  ],
+  "ancho": 1920,
+  "alto": 1280,
+  "origen": "fotos-lena/san-miguel-flecha.jpg",
+  "recorte": null,
+  "lena": true
+ },
+ {
+  "nombre": "mar-de-nubes-1",
+  "anchos": [
+   480,
+   800,
+   1280,
+   1920
+  ],
+  "ancho": 1920,
+  "alto": 1280,
+  "origen": "fotos-lena/mar-de-nubes-1.jpg",
+  "recorte": null,
+  "lena": true
+ },
+ {
+  "nombre": "mar-de-nubes-2",
+  "anchos": [
+   480,
+   800,
+   1280,
+   1920
+  ],
+  "ancho": 1920,
+  "alto": 1280,
+  "origen": "fotos-lena/mar-de-nubes-2.jpg",
+  "recorte": null,
+  "lena": true
+ },
+ {
+  "nombre": "someron-burro",
+  "anchos": [
+   480,
+   800,
+   1280,
+   1920
+  ],
+  "ancho": 1920,
+  "alto": 1280,
+  "origen": "fotos-lena/someron-burro.jpg",
+  "recorte": null,
+  "lena": true
+ },
+ {
+  "nombre": "fresneo-bosque",
+  "anchos": [
+   480,
+   800,
+   1280,
+   1920
+  ],
+  "ancho": 1920,
+  "alto": 1280,
+  "origen": "fotos-lena/fresneo-bosque.jpg",
+  "recorte": null,
+  "lena": true
+ },
+ {
+  "nombre": "fresneo-herias-1",
+  "anchos": [
+   480,
+   800,
+   1280,
+   1920
+  ],
+  "ancho": 1920,
+  "alto": 1280,
+  "origen": "fotos-lena/fresneo-herias-1.jpg",
+  "recorte": null,
+  "lena": true
+ },
+ {
+  "nombre": "herias-aldea",
+  "anchos": [
+   480,
+   800,
+   1280,
+   1920
+  ],
+  "ancho": 1920,
+  "alto": 1280,
+  "origen": "fotos-lena/herias-aldea.jpg",
+  "recorte": null,
+  "lena": true
+ },
+ {
+  "nombre": "herias-galeria",
+  "anchos": [
+   480,
+   800,
+   1280,
+   1920
+  ],
+  "ancho": 1920,
+  "alto": 1280,
+  "origen": "fotos-lena/herias-galeria.jpg",
+  "recorte": null,
+  "lena": true
+ },
+ {
+  "nombre": "herias-campomanes",
+  "anchos": [
+   480,
+   800,
+   1280,
+   1920
+  ],
+  "ancho": 1920,
+  "alto": 1280,
+  "origen": "fotos-lena/herias-campomanes.jpg",
+  "recorte": null,
+  "lena": true
+ },
+ {
+  "nombre": "santa-cristina-1",
+  "anchos": [
+   480,
+   800,
+   1280,
+   1920
+  ],
+  "ancho": 1920,
+  "alto": 1280,
+  "origen": "fotos-lena/santa-cristina-1.jpg",
+  "recorte": null,
+  "lena": true
+ },
+ {
+  "nombre": "santa-cristina-2",
+  "anchos": [
+   480,
+   800,
+   1280,
+   1920
+  ],
+  "ancho": 1920,
+  "alto": 1280,
+  "origen": "fotos-lena/santa-cristina-2.jpg",
+  "recorte": null,
+  "lena": true
+ },
+ {
+  "nombre": "rio-lena",
+  "anchos": [
+   480,
+   800,
+   1280,
+   1920
+  ],
+  "ancho": 1920,
+  "alto": 1280,
+  "origen": "fotos-lena/rio-lena.jpg",
+  "recorte": null,
+  "lena": true
+ },
+ {
+  "nombre": "vega-ciego-puente",
+  "anchos": [
+   480,
+   800,
+   1280,
+   1920
+  ],
+  "ancho": 1920,
+  "alto": 1280,
+  "origen": "fotos-lena/vega-ciego-puente.jpg",
+  "recorte": null,
+  "lena": true
+ },
+ {
+  "nombre": "pola-paseo",
+  "anchos": [
+   480,
+   800,
+   1280,
+   1920
+  ],
+  "ancho": 1920,
+  "alto": 1280,
+  "origen": "fotos-lena/pola-paseo.jpg",
+  "recorte": null,
+  "lena": true
+ },
+ {
+  "nombre": "pola-san-martin-noche",
+  "anchos": [
+   480,
+   800,
+   1280,
+   1920
+  ],
+  "ancho": 1920,
+  "alto": 1280,
+  "origen": "fotos-lena/pola-san-martin-noche.jpg",
+  "recorte": null,
+  "lena": true
+ }
+]

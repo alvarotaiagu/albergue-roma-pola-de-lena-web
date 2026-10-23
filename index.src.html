@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Albergue Roma · Pola de Lena · Camino del Salvador</title>
+<meta name="description" content="Albergue en Pola de Lena, a 250 m del Camino del Salvador, al final de la bajada de Pajares. Registro desde las 13:00, sin hora de cierre. Camas desde 15 € y habitaciones privadas.">
+<meta property="og:title" content="Albergue Roma · Todos los caminos llevan a Roma">
+<meta property="og:description" content="Albergue en Pola de Lena, a 250 m del Camino del Salvador. Al final de la bajada de Pajares.">
+<link rel="preload" as="image" type="image/avif" imagesrcset="img/fotos/puerto-ubinas-2-480.avif 480w, img/fotos/puerto-ubinas-2-800.avif 800w, img/fotos/puerto-ubinas-2-1280.avif 1280w, img/fotos/puerto-ubinas-2-1920.avif 1920w" imagesizes="100vw" fetchpriority="high">
+<!--parte:partes/cabeza.html-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Hostel",
+  "name": "Albergue Roma",
+  "description": "Albergue privado en Pola de Lena, a 250 m del Camino del Salvador, al final de la etapa Pajares → Pola de Lena. Dos dormitorios con literas (20 camas) y seis habitaciones privadas.",
+  "image": "img/og.jpg",
+  "telephone": "+34 677 856 645",
+  "email": "albergueroma@gmail.com",
+  "address": { "@type": "PostalAddress", "streetAddress": "C/ Canuto Hevia, 12", "postalCode": "33630", "addressLocality": "La Pola (Lena)", "addressRegion": "Asturias", "addressCountry": "ES" },
+  "geo": { "@type": "GeoCoordinates", "latitude": 43.15677, "longitude": -5.83017 },
+  "checkinTime": "13:00",
+  "priceRange": "desde 15 €",
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Cocina de uso libre", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Lavadora y secadora", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Taquillas con llave", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Guarda bicis cubierto", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Jardín", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Accesible", "value": true }
+  ],
+  "knowsLanguage": ["es", "en"]
+}
+</script>
+</head>
+<body>
+<!--parte:partes/cortina.html-->
+<!--parte:partes/cabecera.html-->
+
+<main id="principal">
+
+  <!-- ============ 1. portada «Todos los caminos llevan a Roma» ============
+       El lienzo lo pinta el módulo Cruz (js/cruz.js): miles de puntos que llegan por caminos y forman la cruz.
+       Su respaldo (lo que se ve sin JS o sin WebGL): la cruz en SVG, quieta, con su retícula de puntos, y el
+       puerto de Pajares con las Ubiñas muy oscurecido. -->
+  <section id="portada" class="portada" aria-labelledby="t-portada" data-tono="oscuro">
+    <div class="portada__lienzo" data-modulo="cruz">
+      <div class="portada__fondo">
+        <img data-foto="puerto-ubinas-2" alt="" fetchpriority="high" loading="eager" sizes="100vw">
+      </div>
+      <svg class="portada__reticula" aria-hidden="true" focusable="false"><defs><pattern id="reticula-puntos" width="44" height="44" patternUnits="userSpaceOnUse"><circle cx="22" cy="22" r="1.3"/><path d="M0 0l2.2 2.2L0 4.4-2.2 2.2z" transform="translate(0 -2.2)"/></pattern></defs><rect width="100%" height="100%" fill="url(#reticula-puntos)"/></svg>
+      <!--svg:marca/cruz.svg|clase=portada__cruz-->
+    </div>
+    <div class="portada__texto">
+      <p class="eyebrow eyebrow--claro">Pola de Lena · Camino del Salvador</p>
+      <h1 class="portada__tit" id="t-portada"><span class="ln"><span>Todos los caminos</span></span> <span class="ln"><span>llevan a Roma.</span></span></h1>
+      <p class="portada__baj">Albergue en Pola de Lena, a 250 m del Camino del Salvador. Al final de la bajada de Pajares.</p>
+      <div class="portada__acc">
+        <a class="btn btn--ocre" href="#reservar" data-reservar>Ver camas libres</a>
+        <a class="btn btn--hueco-claro" href="tel:+34677856645">Llamar <span class="num">677 856 645</span></a>
+      </div>
+      <p class="portada__vivo" id="vivo"><i aria-hidden="true"></i><span id="vivo-txt">Registro de 13:00 a 21:00</span> <b>· sin hora de cierre</b></p>
+    </div>
+    <p class="portada__pista" aria-hidden="true">Arrastra sobre la cruz</p>
+    <a class="portada__baja" href="#cifras"><span class="vh">Bajar a </span><span aria-hidden="true">Baja</span><span class="vh">las cifras del albergue</span></a>
+  </section>
+
+  <!-- ============ 2. en cifras ============ -->
+  <section class="sec cifras" id="cifras" aria-labelledby="t-cifras">
+    <div class="tramo tramo--0" data-tramo="0" aria-hidden="true"></div>
+    <div class="env">
+      <header class="sec-cab">
+        <p class="eyebrow">El albergue, en cifras</p>
+        <h2 id="t-cifras" data-partir>Lo que importa cuando llegas <em>con la mochila</em></h2>
+      </header>
+      <ol class="cifras__lista">
+        <li><b>250 <small>m</small></b><span>del Camino del Salvador</span></li>
+        <li><b>13:00</b><span>abre el registro</span></li>
+        <li><b class="cifras__txt">sin hora de cierre</b><span>te damos un código para entrar</span></li>
+        <li><b>20 <small>camas</small></b><span>en 2 dormitorios con literas</span></li>
+        <li><b>6</b><span>habitaciones privadas, dobles y cuádruples</span></li>
+        <li><b><small>desde</small> 15 <small>€</small></b><span>la cama, con ropa de cama</span></li>
+      </ol>
+      <p class="cifras__nota">Para peregrinos y para quien viene a Lena: el albergue no es solo del Camino. Abierto todo el año, en el centro de La Pola, a unos 200 m de la estación de tren.</p>
+    </div>
+  </section>
+
+  <!-- ============ (solo en la versión sobria) el albergue, de un vistazo ============ -->
+  <section class="sec vistazo" id="vistazo" aria-labelledby="t-vistazo">
+    <div class="env">
+      <h2 class="vistazo__tit" id="t-vistazo">El albergue, de un vistazo</h2>
+      <table class="vistazo__tabla">
+        <caption class="vh">Datos del Albergue Roma</caption>
+        <tbody>
+          <tr><th scope="row">Plazas</th><td>20 camas en 2 dormitorios con literas · 6 habitaciones privadas (dobles y cuádruples)</td></tr>
+          <tr><th scope="row">Precios desde</th><td>15 € la cama · 35 € la doble · 55 € la cuádruple (por noche)</td></tr>
+          <tr><th scope="row">Registro</th><td>de 13:00 a 21:00 (por confirmar)</td></tr>
+          <tr><th scope="row">Cierre</th><td>sin hora de cierre: te damos un código</td></tr>
+          <tr><th scope="row">Servicios</th><td>cocina de uso libre con microondas y nevera · lavadora y secadora · taquillas con llave · ropa de cama · guarda bicis cubierto · jardín · accesible</td></tr>
+          <tr><th scope="row">Distancias</th><td>250 m al Camino del Salvador · unos 200 m a la estación de Pola de Lena · 13,6 km a Mieres (etapa siguiente)</td></tr>
+          <tr><th scope="row">Abierto</th><td>todo el año · para peregrinos y para quien viene a Lena</td></tr>
+          <tr><th scope="row">Contacto</th><td><a href="tel:+34677856645">677 856 645</a> · <a href="mailto:albergueroma@gmail.com">albergueroma@gmail.com</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============ 3. habitaciones «Cada puerta, un pueblo de Lena» (módulo Puertas) ============ -->
+  <section id="habitaciones" class="sec habitaciones" aria-labelledby="t-habitaciones">
+    <div class="tramo" data-tramo="1" aria-hidden="true"></div>
+    <div class="env">
+      <header class="sec-cab">
+        <p class="eyebrow">Habitaciones</p>
+        <h2 id="t-habitaciones" data-partir>Cada puerta, <em>un pueblo de Lena</em></h2>
+        <p class="sec-cab__txt">En cada puerta, un cartel de madera con el nombre de un pueblo del concejo. Dos dormitorios con literas y seis habitaciones privadas.</p>
+      </header>
+    </div>
+    <div class="puertas-hueco" data-modulo="puertas">
+      <div class="env">
+        <ul class="habs" id="habs">
+          <li class="hab" data-hab="pajares">
+            <img data-foto="dormitorio-grande" alt="Dormitorio con literas de hierro negro, taquillas azules y un ventanal" sizes="(max-width: 699px) 100vw, 30vw">
+            <div class="hab__txt"><h3 class="hab__nombre">Pajares</h3><p class="hab__tipo">Dormitorio compartido, con literas</p><p class="hab__datos"><span>10 plazas</span><span>desde 15 € la cama</span></p><button type="button" class="btn btn--castano hab__btn" data-reservar="pajares">Ver si hay sitio</button></div>
+          </li>
+          <li class="hab" data-hab="carabanzo">
+            <img data-foto="dormitorio-taquillas" alt="Dormitorio con taquillas azules, la escalera de una litera y la puerta con el cartel «Carabanzo»" sizes="(max-width: 699px) 100vw, 30vw">
+            <div class="hab__txt"><h3 class="hab__nombre">Carabanzo</h3><p class="hab__tipo">Dormitorio compartido, con literas</p><p class="hab__datos"><span>10 plazas</span><span>desde 15 € la cama</span></p><button type="button" class="btn btn--castano hab__btn" data-reservar="carabanzo">Ver si hay sitio</button></div>
+          </li>
+          <li class="hab" data-hab="santa-marina">
+            <img data-foto="dormitorio-focos" alt="Habitación con literas de hierro y focos en el techo" sizes="(max-width: 699px) 100vw, 30vw">
+            <div class="hab__txt"><h3 class="hab__nombre">Santa Marina</h3><p class="hab__tipo">Habitación cuádruple, dos literas</p><p class="hab__datos"><span>4 plazas</span><span>desde 55 € la habitación</span></p><button type="button" class="btn btn--castano hab__btn" data-reservar="santa-marina">Ver si hay sitio</button></div>
+          </li>
+          <li class="hab" data-hab="someron">
+            <img data-foto="litera" alt="Litera de hierro negro con colcha beige" sizes="(max-width: 699px) 100vw, 30vw">
+            <div class="hab__txt"><h3 class="hab__nombre">Llanos de Somerón</h3><p class="hab__tipo">Habitación cuádruple, dos literas</p><p class="hab__datos"><span>4 plazas</span><span>desde 55 € la habitación</span></p><button type="button" class="btn btn--castano hab__btn" data-reservar="someron">Ver si hay sitio</button></div>
+          </li>
+          <li class="hab" data-hab="herias">
+            <img data-foto="dormitorio-grande" alt="Literas de hierro negro junto a un ventanal" sizes="(max-width: 699px) 100vw, 30vw">
+            <div class="hab__txt"><h3 class="hab__nombre">Herías</h3><p class="hab__tipo">Habitación cuádruple, dos literas</p><p class="hab__datos"><span>4 plazas</span><span>desde 55 € la habitación</span></p><button type="button" class="btn btn--castano hab__btn" data-reservar="herias">Ver si hay sitio</button></div>
+          </li>
+          <li class="hab" data-hab="campomanes">
+            <img data-foto="dormitorio-taquillas" alt="Taquillas azules y una litera de hierro" sizes="(max-width: 699px) 100vw, 30vw">
+            <div class="hab__txt"><h3 class="hab__nombre">Campomanes</h3><p class="hab__tipo">Habitación cuádruple, dos literas</p><p class="hab__datos"><span>4 plazas</span><span>desde 55 € la habitación</span></p><button type="button" class="btn btn--castano hab__btn" data-reservar="campomanes">Ver si hay sitio</button></div>
+          </li>
+          <li class="hab" data-hab="fresneo">
+            <img data-foto="habitacion-dos-camas" alt="Habitación con dos camas, taquillas azules y una ventana" sizes="(max-width: 699px) 100vw, 30vw">
+            <div class="hab__txt"><h3 class="hab__nombre">Fresneo</h3><p class="hab__tipo">Habitación doble, dos camas</p><p class="hab__datos"><span>2 plazas</span><span>desde 35 € la habitación</span></p><button type="button" class="btn btn--castano hab__btn" data-reservar="fresneo">Ver si hay sitio</button></div>
+          </li>
+          <li class="hab" data-hab="vega-ciego">
+            <img data-foto="habitacion-dos-camas" alt="Dos camas con taquillas azules al fondo" sizes="(max-width: 699px) 100vw, 30vw">
+            <div class="hab__txt"><h3 class="hab__nombre">Vega del Ciego</h3><p class="hab__tipo">Habitación doble, dos camas</p><p class="hab__datos"><span>2 plazas</span><span>desde 35 € la habitación</span></p><button type="button" class="btn btn--castano hab__btn" data-reservar="vega-ciego">Ver si hay sitio</button></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="env"><p class="nota-supuesto">De los carteles solo conocemos «Carabanzo»: los demás nombres y el reparto de las seis privadas son de ejemplo, a confirmar con el albergue.</p></div>
+  </section>
+
+  <!-- ============ 4. lo que hay ============ -->
+  <section id="hay" class="sec hay" aria-labelledby="t-hay">
+    <div class="tramo" data-tramo="2" aria-hidden="true"></div>
+    <div class="env">
+      <header class="sec-cab">
+        <p class="eyebrow">Lo que hay</p>
+        <h2 id="t-hay" data-partir>Cocina libre, lavadora <em>y una taquilla con llave</em></h2>
+        <p class="sec-cab__txt">Lo justo después de una etapa larga: dónde cocinar, dónde lavar la ropa y dónde dejar la mochila y la bici.</p>
+      </header>
+      <div class="hay__rejilla">
+        <figure class="hay__foto hay__foto--cocina" data-revela>
+          <button type="button" class="foto-btn" data-visor="cocina" aria-label="Ampliar: la cocina comedor"><img data-foto="cocina" alt="Cocina comedor con pared de ladrillo visto, una mesa oscura con seis sillas y una televisión" sizes="(max-width: 899px) 100vw, 56vw"></button>
+          <figcaption>La cocina comedor: de uso libre, con microondas y nevera.</figcaption>
+        </figure>
+        <figure class="hay__foto hay__foto--taquillas" data-revela>
+          <button type="button" class="foto-btn" data-visor="dormitorio-grande" aria-label="Ampliar: el dormitorio grande"><img data-foto="dormitorio-grande" alt="Dormitorio con literas de hierro negro, taquillas azules y un ventanal" sizes="(max-width: 899px) 100vw, 34vw"></button>
+          <figcaption>Taquillas individuales con llave, en azul.</figcaption>
+        </figure>
+        <figure class="hay__foto hay__foto--litera" data-revela>
+          <button type="button" class="foto-btn" data-visor="litera" aria-label="Ampliar: una litera"><img data-foto="litera" alt="Litera de hierro negro con colcha beige" sizes="(max-width: 899px) 50vw, 24vw"></button>
+          <figcaption>Literas de hierro, con ropa de cama.</figcaption>
+        </figure>
+        <figure class="hay__foto hay__foto--bano" data-revela>
+          <button type="button" class="foto-btn" data-visor="bano-2" aria-label="Ampliar: un baño"><img data-foto="bano-2" alt="Baño con ducha de mampara y lavabo" sizes="(max-width: 899px) 50vw, 24vw"></button>
+          <figcaption>Baños con ducha.</figcaption>
+        </figure>
+        <ul class="hay__lista">
+          <li><b>Cocina de uso libre</b><span>con microondas y nevera</span></li>
+          <li><b>Lavadora y secadora</b><span>pregunta el precio al llegar</span></li>
+          <li><b>Taquillas individuales</b><span>con llave</span></li>
+          <li><b>Ropa de cama</b><span>incluida</span></li>
+          <li><b>Guarda bicis cubierto</b><span>para quien hace el camino en bici</span></li>
+          <li><b>Jardín</b><span>para tender y estirar las piernas</span></li>
+          <li><b>Accesible</b><span>para personas con movilidad reducida</span></li>
+          <li><b>Calefacción</b><span>en las habitaciones</span></li>
+        </ul>
+      </div>
+      <p class="nota-supuesto">«Pregunta el precio»: algunos servicios tienen coste aparte y no sabemos cuáles; lo dirá el albergue.</p>
+    </div>
+  </section>
+
+  <!-- ============ 5. la bajada «De la nieve del puerto a tu litera» (2D: js/bajada.js; sin 3D por decisión de Álvaro) ============
+       Las cifras salen SOLO de img/terreno/bajada.json (scripts/terreno.py: trazado de OSM y MDT05 del IGN). -->
+  <section id="bajada" class="sec bajada" aria-labelledby="t-bajada" data-tono="oscuro">
+    <div class="tramo" data-tramo="3" aria-hidden="true"></div>
+    <div class="env">
+      <header class="sec-cab">
+        <p class="eyebrow eyebrow--claro">La bajada de Pajares</p>
+        <h2 id="t-bajada" data-partir>De la nieve del puerto <em>a tu litera</em></h2>
+        <p class="sec-cab__txt">Del Puerto de Pajares a la puerta del albergue hay 28,3 km por el Camino del Salvador: de 1.377 m a 316 m. Bajas de la cordillera por viejas veredas entre aldeas, hasta el río Lena. Y acaba aquí.</p>
+      </header>
+    </div>
+    <!--json:img/terreno/bajada.json|id=bajada-datos-->
+    <div class="bajada__hueco" data-modulo="bajada">
+      <div class="env bajada__respaldo">
+        <img class="bajada__perfil-img" src="img/terreno/perfil.svg" width="1200" height="420" loading="lazy" decoding="async" alt="Perfil de la bajada: 28,3 km del Puerto de Pajares (1.377 m) a Pola de Lena (316 m), pasando por San Miguel del Río, Puente de los Fierros y Campomanes.">
+        <ol class="bajada__pueblos" aria-label="Los pueblos de la bajada, por orden, con su km y su altitud">
+          <li><b>Puerto de Pajares</b><span>km 0,0 · 1.377 m</span></li>
+          <li><b>San Miguel del Río</b><span>km 6,1 · 722 m</span></li>
+          <li><b>Santa Marina</b><span>km 7,2 · 767 m</span></li>
+          <li><b>Llanos de Somerón</b><span>km 9,4 · 857 m</span></li>
+          <li><b>Puente de los Fierros</b><span>km 13,9 · 537 m</span></li>
+          <li><b>Fresneo</b><span>km 14,5 · 565 m</span></li>
+          <li><b>Herías</b><span>km 19,5 · 554 m</span></li>
+          <li><b>Campomanes</b><span>km 21,1 · 379 m</span></li>
+          <li><b>Santa Cristina de Lena</b><span>km 24,0 · 392 m</span></li>
+          <li><b>Vega del Ciego</b><span>km 25,8 · 326 m</span></li>
+          <li class="es-meta"><b>Pola de Lena · Albergue Roma</b><span>km 28,3 · 316 m</span></li>
+        </ol>
+      </div>
+    </div>
+    <div class="env bajada__pie">
+      <p>Las guías (Gronze) dan la etapa 4 desde el pueblo de Pajares: 23,8 km, 595 m de subida y 1.273 m de bajada. Aquí se cuenta desde el puerto, donde acaba la etapa 3. Trazado según <a href="https://www.openstreetmap.org/relation/2661682" rel="noopener" target="_blank">OpenStreetMap</a> y altitudes del MDT05 del IGN: las flechas del camino mandan.</p>
+      <a class="btn btn--ocre" href="#reservar" data-reservar>Ver camas libres</a>
+    </div>
+  </section>
+
+  <!-- ============ 6. Lena alrededor ============ -->
+  <section id="lena" class="sec lena" aria-labelledby="t-lena">
+    <div class="tramo" data-tramo="4" aria-hidden="true"></div>
+    <div class="env">
+      <header class="sec-cab">
+        <p class="eyebrow">Lena alrededor</p>
+        <h2 id="t-lena" data-partir>Lo que has visto hoy, <em>y lo que tienes cerca</em></h2>
+        <p class="sec-cab__txt">Del puerto a La Pola el camino pasa por aldeas con galería, prados con caballos y una iglesia prerrománica.</p>
+      </header>
+    </div>
+    <div class="lena__serie">
+      <figure class="lena__foto lena__foto--ancha">
+        <div class="lena__marco" data-paralaje><img data-foto="santa-cristina-1" alt="La iglesia de Santa Cristina de Lena, de piedra, sobre un prado verde y con el valle al fondo" sizes="100vw"></div>
+        <figcaption><b>Santa Cristina de Lena</b><span>Prerrománico, en la propia etapa: el camino pasa junto a ella entre Campomanes y La Pola.</span><a class="credito" href="https://commons.wikimedia.org/wiki/File:Camino%20de%20San%20Salvador%2C%20Iglesia%20de%20Santa%20Cristina%20de%20Lena%2C%2001.jpg" rel="noopener" target="_blank">Foto: Mongolo1984 · CC BY-SA 4.0</a></figcaption>
+      </figure>
+      <div class="env lena__par">
+        <figure class="lena__foto lena__foto--alta">
+          <div class="lena__marco" data-paralaje><img data-foto="mar-de-nubes-1" alt="Un sendero entre prados y estacas de madera, con el valle cubierto por un mar de nubes" sizes="(max-width: 899px) 100vw, 46vw"></div>
+          <figcaption><b>Entre Santa Marina y Llanos de Somerón</b><span>Una mañana con el valle bajo las nubes.</span><a class="credito" href="https://commons.wikimedia.org/wiki/File:Camino%20de%20San%20Salvador%2C%20tratto%20del%20cammino%20tra%20Santa%20Marina%20e%20Llanos%20de%20Somer%C3%B3n%2002.jpg" rel="noopener" target="_blank">Foto: Mongolo1984 · CC BY-SA 4.0</a></figcaption>
+        </figure>
+        <figure class="lena__foto lena__foto--baja">
+          <div class="lena__marco" data-paralaje><img data-foto="bajada-caballos" alt="Dos caballos castaños juntos en un prado de la bajada" sizes="(max-width: 899px) 100vw, 40vw"></div>
+          <figcaption><b>Entre el puerto y Pajares</b><span>Caballos sueltos en los prados de la bajada.</span><a class="credito" href="https://commons.wikimedia.org/wiki/File:Camino%20de%20San%20Salvador%2C%20tratto%20del%20cammino%20tra%20Puerto%20de%20Pajares%20e%20Pajares%2012.jpg" rel="noopener" target="_blank">Foto: Mongolo1984 · CC BY-SA 4.0</a></figcaption>
+        </figure>
+      </div>
+      <figure class="lena__foto lena__foto--ancha lena__foto--der">
+        <div class="lena__marco" data-paralaje><img data-foto="herias-galeria" alt="Una casa de Herías con una galería de madera acristalada en lo alto" sizes="100vw"></div>
+        <figcaption><b>Herías</b><span>Una casa con su galería, junto al camino.</span><a class="credito" href="https://commons.wikimedia.org/wiki/File:Camino%20de%20San%20Salvador%2C%20Her%C3%ADas%2006.jpg" rel="noopener" target="_blank">Foto: Mongolo1984 · CC BY-SA 4.0</a></figcaption>
+      </figure>
+      <div class="env lena__par lena__par--inv">
+        <figure class="lena__foto lena__foto--baja">
+          <div class="lena__marco" data-paralaje><img data-foto="rio-lena" alt="El río Lena bajando entre árboles en Vega del Ciego" sizes="(max-width: 899px) 100vw, 40vw"></div>
+          <figcaption><b>Vega del Ciego</b><span>El río Lena, ya cerca de La Pola.</span><a class="credito" href="https://commons.wikimedia.org/wiki/File:Camino%20de%20San%20Salvador%2C%20Vega%20del%20Ciego%2C%20r%C3%ADo%20Lena%2001.jpg" rel="noopener" target="_blank">Foto: Mongolo1984 · CC BY-SA 4.0</a></figcaption>
+        </figure>
+        <figure class="lena__foto lena__foto--alta">
+          <div class="lena__marco" data-paralaje><img data-foto="pola-san-martin-noche" alt="La iglesia de San Martín, en Pola de Lena, iluminada al anochecer entre edificios" sizes="(max-width: 899px) 100vw, 46vw"></div>
+          <figcaption><b>La Pola, de noche</b><span>San Martín, a unos pasos del albergue.</span><a class="credito" href="https://commons.wikimedia.org/wiki/File:Camino%20de%20San%20Salvador%2C%20La%20Pola%20de%20Lena%2C%20Iglesia%20de%20San%20Mart%C3%ADn%20el%20Real%2001.jpg" rel="noopener" target="_blank">Foto: Mongolo1984 · CC BY-SA 4.0</a></figcaption>
+        </figure>
+      </div>
+      <div class="env lena__manana">
+        <figure class="lena__foto lena__foto--flecha">
+          <div class="lena__marco"><img data-foto="san-miguel-flecha" alt="Un poste con la concha y la flecha amarilla del Camino, en San Miguel del Río" sizes="(max-width: 899px) 60vw, 26vw"></div>
+          <figcaption><b>San Miguel del Río</b><a class="credito" href="https://commons.wikimedia.org/wiki/File:Camino%20de%20San%20Salvador%2C%20San%20Miguel%20del%20R%C3%ADo%2003.jpg" rel="noopener" target="_blank">Foto: Mongolo1984 · CC BY-SA 4.0</a></figcaption>
+        </figure>
+        <div class="lena__manana-txt">
+          <p class="eyebrow">Y mañana</p>
+          <p class="lena__mieres">A Mieres: <b>13,6 km</b>, llana, junto al río.</p>
+          <p>La etapa 5 sigue los ríos Lena y Caudal, casi toda sobre asfalto. Desde Mieres, la última etapa llega a Oviedo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 7. reservar: el simulador de camas (DEMOSTRACIÓN, js/reserva.js) ============ -->
+  <!--parte:partes/reserva.html-->
+
+  <!-- ============ 8. cómo llegar ============ -->
+  <!--parte:partes/llegar.html-->
+</main>
+
+<!--parte:partes/pie.html-->
+<!--parte:partes/visor.html-->
+<!--parte:partes/guiones.html-->
+</body>
+</html>

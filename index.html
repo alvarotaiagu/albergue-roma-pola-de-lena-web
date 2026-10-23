@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Albergue Roma · Pola de Lena · Camino del Salvador</title>
+<meta name="description" content="Albergue en Pola de Lena, a 250 m del Camino del Salvador, al final de la bajada de Pajares. Registro desde las 13:00, sin hora de cierre. Camas desde 15 € y habitaciones privadas.">
+<meta property="og:title" content="Albergue Roma · Todos los caminos llevan a Roma">
+<meta property="og:description" content="Albergue en Pola de Lena, a 250 m del Camino del Salvador. Al final de la bajada de Pajares.">
+<link rel="preload" as="image" type="image/avif" imagesrcset="img/fotos/puerto-ubinas-2-480.avif 480w, img/fotos/puerto-ubinas-2-800.avif 800w, img/fotos/puerto-ubinas-2-1280.avif 1280w, img/fotos/puerto-ubinas-2-1920.avif 1920w" imagesizes="100vw" fetchpriority="high">
+<!-- script bloqueante: clases antes del primer pintado -->
+<script>
+(function (d) {
+  var h = d.documentElement;
+  h.classList.add('js');
+  try { if (matchMedia('(prefers-reduced-motion: reduce)').matches) h.classList.add('quieto'); } catch (e) {}
+  // MANDO DE MAQUETA (no viaja al cliente): solo con ?revision
+  try {
+    var q = new URLSearchParams(location.search);
+    if (q.has('revision')) {
+      h.classList.add('revision');
+      if (q.get('densidad') === 'sobria') h.classList.add('densidad-sobria');
+    }
+  } catch (e) {}
+  // red de seguridad por si main.js o cortina.js no llegan: la celosía se va sola
+  window.__redCortina = setTimeout(function () {
+    h.classList.add('cortina-fuera'); h.classList.remove('cortina-activa');
+    var c = d.getElementById('cortina'); if (c) c.hidden = true;
+  }, 6500);
+})(document);
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Sora:wght@400;600;700;800&family=Yellowtail&display=swap">
+<link rel="stylesheet" href="css/estilos.css?v=8cae380c">
+<link rel="stylesheet" href="css/cortina.css?v=ea15acc4">
+<link rel="stylesheet" href="css/cruz.css?v=eeb78639">
+<link rel="stylesheet" href="css/puertas.css?v=5fa54585">
+<link rel="icon" href="marca/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="marca/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="marca/apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#16110D">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<noscript><style>.cortina{display:none!important}</style></noscript>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Hostel",
+  "name": "Albergue Roma",
+  "description": "Albergue privado en Pola de Lena, a 250 m del Camino del Salvador, al final de la etapa Pajares → Pola de Lena. Dos dormitorios con literas (20 camas) y seis habitaciones privadas.",
+  "image": "img/og.jpg",
+  "telephone": "+34 677 856 645",
+  "email": "albergueroma@gmail.com",
+  "address": { "@type": "PostalAddress", "streetAddress": "C/ Canuto Hevia, 12", "postalCode": "33630", "addressLocality": "La Pola (Lena)", "addressRegion": "Asturias", "addressCountry": "ES" },
+  "geo": { "@type": "GeoCoordinates", "latitude": 43.15677, "longitude": -5.83017 },
+  "checkinTime": "13:00",
+  "priceRange": "desde 15 €",
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Cocina de uso libre", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Lavadora y secadora", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Taquillas con llave", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Guarda bicis cubierto", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Jardín", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Accesible", "value": true }
+  ],
+  "knowsLanguage": ["es", "en"]
+}
+</script>
+</head>
+<body>
+<!-- ============ cortina «La celosía» (agente Cruz) ============
+     Los cinco puntos del símbolo, la cruz que se dibuja rombo a rombo desde el centro, la celosía
+     que se multiplica, la luz cálida por los huecos y la celosía que se abre desde el centro; la cruz
+     central vuela a su sitio en la portada. Piezas: partes/cortina.html + css/cortina.css + js/cortina.js.
+     Se retira SIEMPRE: sin JS no llega a pintarse (la clase la pone este script), con movimiento
+     reducido ni un fotograma, y si js/cortina.js no está cuando el HTML ya se ha leído, se va al momento.
+     ?sin-cortina la quita (pruebas y revisión). -->
+<script>
+(function (d, w) {
+  var h = d.documentElement, q = '';
+  try { q = w.location.search; } catch (e) {}
+  var reducido = false;
+  try { reducido = w.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+  if (reducido || /[?&]sin-cortina(=|&|$)/.test(q)) { h.classList.add('cortina-fuera'); return; }
+  h.classList.add('cortina-activa');
+  function fuera() {
+    h.classList.remove('cortina-activa'); h.classList.add('cortina-fuera');
+    var c = d.getElementById('cortina'); if (c) c.hidden = true;
+  }
+  // red de seguridad propia (la web pone otra en la cabeza): a los 6,5 s fuera, pase lo que pase
+  w.__romaRedCortina = setTimeout(fuera, 6500);
+  // los defer ya han corrido al llegar aquí: si js/cortina.js no está, la celosía se va ya
+  d.addEventListener('DOMContentLoaded', function () {
+    if (!(w.Roma && w.Roma.cortina)) { clearTimeout(w.__romaRedCortina); fuera(); }
+  });
+})(document, window);
+</script>
+<div class="cortina" id="cortina" aria-hidden="true">
+  <svg class="cortina__defs" width="0" height="0" focusable="false" aria-hidden="true">
+    <defs>
+      <!-- la geometría de marca/cruz.svg, con el centro en 0,0 (la punta de cada pétalo a 19,3) -->
+      <path id="cortina-petalo" d="M-4.05 -6V-14.9C-4.05 -17.2 -1.6 -19.05 0 -19.3C1.6 -19.05 4.05 -17.2 4.05 -14.9V-6Z"/>
+      <path id="cortina-rombo" d="M0 -4.75L3.99 -0.76Q4.75 0 3.99 0.76L0 4.75L-3.99 0.76Q-4.75 0 -3.99 -0.76Z"/>
+      <g id="cortina-x">
+        <use href="#cortina-petalo"/>
+        <use href="#cortina-petalo" transform="rotate(90)"/>
+        <use href="#cortina-petalo" transform="rotate(180)"/>
+        <use href="#cortina-petalo" transform="rotate(270)"/>
+        <use href="#cortina-rombo" x="-13.21" y="-16.44"/>
+        <use href="#cortina-rombo" x="14.13" y="-16.44"/>
+        <use href="#cortina-rombo" x="-13.21" y="16.56"/>
+        <use href="#cortina-rombo" x="14.13" y="16.56"/>
+        <circle class="cortina__x-centro" r="3.85"/>
+      </g>
+    </defs>
+  </svg>
+  <!-- el muro (castaño casi negro) y la luz cálida que pasa por los huecos; el hueco se abre desde el centro -->
+  <div class="cortina__muro"><div class="cortina__luz"></div></div>
+  <!-- la retícula de cruces y puntos (la monta js/cortina.js a la medida de la pantalla) -->
+  <div class="cortina__celosia"></div>
+  <!-- la cruz central: se dibuja, se rellena y vuela a la portada -->
+  <div class="cortina__cruz">
+    <svg viewBox="-22 -22 44 44" focusable="false" aria-hidden="true">
+      <g class="cortina__halo"><circle r="9"/></g>
+      <g class="cortina__rellenos">
+        <use href="#cortina-petalo"/>
+        <use href="#cortina-petalo" transform="rotate(90)"/>
+        <use href="#cortina-petalo" transform="rotate(180)"/>
+        <use href="#cortina-petalo" transform="rotate(270)"/>
+      </g>
+      <g class="cortina__trazos">
+        <g><path pathLength="1" d="M0 -6H-4.05V-14.9C-4.05 -17.2 -1.6 -19.05 0 -19.3"/><path pathLength="1" d="M0 -6H4.05V-14.9C4.05 -17.2 1.6 -19.05 0 -19.3"/></g>
+        <g transform="rotate(90)"><path pathLength="1" d="M0 -6H-4.05V-14.9C-4.05 -17.2 -1.6 -19.05 0 -19.3"/><path pathLength="1" d="M0 -6H4.05V-14.9C4.05 -17.2 1.6 -19.05 0 -19.3"/></g>
+        <g transform="rotate(180)"><path pathLength="1" d="M0 -6H-4.05V-14.9C-4.05 -17.2 -1.6 -19.05 0 -19.3"/><path pathLength="1" d="M0 -6H4.05V-14.9C4.05 -17.2 1.6 -19.05 0 -19.3"/></g>
+        <g transform="rotate(270)"><path pathLength="1" d="M0 -6H-4.05V-14.9C-4.05 -17.2 -1.6 -19.05 0 -19.3"/><path pathLength="1" d="M0 -6H4.05V-14.9C4.05 -17.2 1.6 -19.05 0 -19.3"/></g>
+      </g>
+      <g class="cortina__puntos">
+        <g transform="translate(-13.21 -16.44)"><use href="#cortina-rombo"/></g>
+        <g transform="translate(14.13 -16.44)"><use href="#cortina-rombo"/></g>
+        <g transform="translate(14.13 16.56)"><use href="#cortina-rombo"/></g>
+        <g transform="translate(-13.21 16.56)"><use href="#cortina-rombo"/></g>
+        <circle class="cortina__centro" r="3.85"/>
+      </g>
+    </svg>
+  </div>
+</div>
+<a class="saltar" href="#principal">Saltar al contenido</a>
+
+<!-- ============ cabecera fija: el logo (vectorizado), las cinco paradas, el teléfono y los cinco arcos de lectura ============ -->
+<header class="cab" id="cab">
+  <div class="cab__in">
+    <a class="marca" href="./" aria-label="Albergue Roma, Pola de Lena: a la portada">
+      <svg class="marca__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 5 298 45" aria-hidden="true" focusable="false"><g class="logo-cruz" fill="#683C10" transform="translate(21.1 27.86)"><path transform="rotate(0)" d="M-4.05 -6V-14.9C-4.05 -17.2 -1.6 -19.05 0 -19.3C1.6 -19.05 4.05 -17.2 4.05 -14.9V-6Z"/><path transform="rotate(90)" d="M-4.05 -6V-14.9C-4.05 -17.2 -1.6 -19.05 0 -19.3C1.6 -19.05 4.05 -17.2 4.05 -14.9V-6Z"/><path transform="rotate(180)" d="M-4.05 -6V-14.9C-4.05 -17.2 -1.6 -19.05 0 -19.3C1.6 -19.05 4.05 -17.2 4.05 -14.9V-6Z"/><path transform="rotate(270)" d="M-4.05 -6V-14.9C-4.05 -17.2 -1.6 -19.05 0 -19.3C1.6 -19.05 4.05 -17.2 4.05 -14.9V-6Z"/><path d="M-13.21 -21.19L-9.22 -17.2Q-8.46 -16.44 -9.22 -15.68L-13.21 -11.69L-17.2 -15.68Q-17.96 -16.44 -17.2 -17.2Z"/><path d="M14.13 -21.19L18.12 -17.2Q18.88 -16.44 18.12 -15.68L14.13 -11.69L10.14 -15.68Q9.38 -16.44 10.14 -17.2Z"/><path d="M-13.21 11.81L-9.22 15.8Q-8.46 16.56 -9.22 17.32L-13.21 21.31L-17.2 17.32Q-17.96 16.56 -17.2 15.8Z"/><path d="M14.13 11.81L18.12 15.8Q18.88 16.56 18.12 17.32L14.13 21.31L10.14 17.32Q9.38 16.56 10.14 15.8Z"/><circle class="cruz-centro" r="3.85" fill="#B07E4A"/></g><g class="logo-letras" fill="none" stroke="#1A1612" stroke-width="3.9" stroke-linecap="round" stroke-linejoin="round"><path d="M47.95 29.8L54.95 9.4Q56.2 7.3 57.45 9.4L64.5 29.8"/><path d="M70.58 8.85V29.8H81.6"/><path d="M87.88 29.8V9.1H97.7Q99.72 9.1 99.72 11.1V17.05Q99.72 19.05 97.7 19.05H94.3M97.9 19.05Q100.32 19.05 100.32 21.5V27.8Q100.32 29.8 98.3 29.8H87.88"/><path d="M119.4 9.1H108.31V29.8H119.6"/><path d="M125.46 29.8V9.1H135.4Q137.4 9.1 137.4 11.1V17.4Q137.4 19.4 135.4 19.4H130.9M133.6 19.6L139.4 29.8"/><path d="M157.56 14.4V11.8Q157.56 9.2 154.96 9.2H148.16Q145.56 9.2 145.56 11.8V27.1Q145.56 29.7 148.16 29.7H155.12Q157.72 29.7 157.72 27.1V19.9"/><path d="M165.82 8.8V26.4Q165.82 29.5 168.92 29.5H175.43Q178.53 29.5 178.53 26.4V8.8"/><path d="M196.7 9.1H186.65V29.8H197.3"/><path d="M212.74 29.8V9.1H222.68Q224.68 9.1 224.68 11.1V17.4Q224.68 19.4 222.68 19.4H218.18M220.88 19.6L226.68 29.8"/><path d="M235.9 9.07H242.37Q245.37 9.07 245.37 12.07V26.81Q245.37 29.81 242.37 29.81H235.9Q232.9 29.81 232.9 26.81V12.07Q232.9 9.07 235.9 9.07Z"/><path d="M253.36 29.8V9.4Q253.36 8.9 254.2 8.9H255L262.35 29.1L269.7 8.9H270.5Q271.34 8.9 271.34 9.4V29.8"/><path d="M276.89 29.8L283.89 9.4Q285.14 7.3 286.39 9.4L293.44 29.8"/></g><g class="logo-puntos" fill="#B07E4A"><circle cx="56.3" cy="24.35" r="2.5"/><circle cx="115.6" cy="19" r="2.55"/><circle cx="152.1" cy="20.45" r="2.55"/><circle cx="193.6" cy="19" r="2.55"/><circle cx="285.55" cy="24.5" r="2.5"/></g></svg>
+    </a>
+    <nav class="cab__nav" aria-label="Principal">
+      <a href="#habitaciones" data-arco="1">Habitaciones</a>
+      <a href="#hay" data-arco="2">Lo que hay</a>
+      <a href="#bajada" data-arco="3">La bajada</a>
+      <a href="#lena" data-arco="4">Lena</a>
+      <a href="#reservar" data-arco="5">Reservar</a>
+    </nav>
+    <!-- los cinco arcos del logo: se rellenan al leer cada sección -->
+    <svg id="lectura" class="lectura" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 254 99" aria-hidden="true" focusable="false"><g class="logo-puente" fill="#B07E4A" transform="translate(-44 -42)"><path class="logo-linea" d="M46.9 44.99L295 67.31" fill="none" stroke="#B07E4A" stroke-width="1.3" stroke-linecap="round"/><path class="arco arco-1" d="M46.99 79.45V70.21A25.62 15.55 0 0 1 72.61 54.65L72.61 55.83A14.83 22.79 0 0 0 57.78 78.62V77.94Z"/><path class="arco arco-2" d="M93.7 89.2V78.57A25.98 17.29 0 0 1 119.69 61.29L119.69 62.5A14.37 23.3 0 0 0 105.32 85.81V88.02Z"/><path class="arco arco-3" d="M143.81 109.83V89.64A27.65 22.15 0 0 1 171.45 67.49L171.45 68.82A16.65 22.13 0 0 0 154.8 90.95V108.53Z"/><path class="arco arco-4" d="M199.78 139.02V97.09A29.6 22.39 0 0 1 229.38 74.7L229.38 76.01A17.84 24.82 0 0 0 211.54 100.83V137.34Z"/><path class="arco arco-5" d="M264.32 109.83V102.56A28.43 20.83 0 0 1 292.75 81.73L292.75 83.02A17.86 23.64 0 0 0 274.9 106.66V108.69Z"/></g></svg>
+    <a class="cab__tel" href="tel:+34677856645"><span class="vh">Teléfono: </span>677 856 645</a>
+    <button class="cab__menu" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu-movil"><span class="vh">Menú</span><i></i><i></i></button>
+  </div>
+  <div class="menu-movil" id="menu-movil" aria-hidden="true">
+    <nav aria-label="Menú">
+      <a href="#habitaciones"><small>Cada puerta, un pueblo de Lena</small>Habitaciones</a>
+      <a href="#hay"><small>Cocina, lavadora, taquillas, bicis</small>Lo que hay</a>
+      <a href="#bajada"><small>Del puerto de Pajares a tu litera</small>La bajada</a>
+      <a href="#lena"><small>Santa Cristina, el río, Herías</small>Lena</a>
+      <a href="#reservar"><small>Camas libres, noche a noche</small>Reservar</a>
+      <a href="#llegar"><small>C/ Canuto Hevia, 12 · La Pola</small>Cómo llegar</a>
+    </nav>
+    <p class="menu-movil__tel"><a href="tel:+34677856645">677 856 645</a></p>
+  </div>
+</header>
+
+<main id="principal">
+
+  <!-- ============ 1. portada «Todos los caminos llevan a Roma» ============
+       El lienzo lo pinta el módulo Cruz (js/cruz.js): miles de puntos que llegan por caminos y forman la cruz.
+       Su respaldo (lo que se ve sin JS o sin WebGL): la cruz en SVG, quieta, con su retícula de puntos, y el
+       puerto de Pajares con las Ubiñas muy oscurecido. -->
+  <section id="portada" class="portada" aria-labelledby="t-portada" data-tono="oscuro">
+    <div class="portada__lienzo" data-modulo="cruz">
+      <div class="portada__fondo">
+        <picture data-foto="puerto-ubinas-2"><source type="image/avif" srcset="img/fotos/puerto-ubinas-2-480.avif 480w, img/fotos/puerto-ubinas-2-800.avif 800w, img/fotos/puerto-ubinas-2-1280.avif 1280w, img/fotos/puerto-ubinas-2-1920.avif 1920w" sizes="100vw"><source type="image/webp" srcset="img/fotos/puerto-ubinas-2-480.webp 480w, img/fotos/puerto-ubinas-2-800.webp 800w, img/fotos/puerto-ubinas-2-1280.webp 1280w, img/fotos/puerto-ubinas-2-1920.webp 1920w" sizes="100vw"><img src="img/fotos/puerto-ubinas-2-800.jpg" srcset="img/fotos/puerto-ubinas-2-480.jpg 480w, img/fotos/puerto-ubinas-2-800.jpg 800w, img/fotos/puerto-ubinas-2-1280.jpg 1280w, img/fotos/puerto-ubinas-2-1920.jpg 1920w" sizes="100vw" width="1920" height="1280" alt="" fetchpriority="high" loading="eager" decoding="async"></picture>
+      </div>
+      <svg class="portada__reticula" aria-hidden="true" focusable="false"><defs><pattern id="reticula-puntos" width="44" height="44" patternUnits="userSpaceOnUse"><circle cx="22" cy="22" r="1.3"/><path d="M0 0l2.2 2.2L0 4.4-2.2 2.2z" transform="translate(0 -2.2)"/></pattern></defs><rect width="100%" height="100%" fill="url(#reticula-puntos)"/></svg>
+      <svg class="portada__cruz" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 44" aria-hidden="true" focusable="false"><g transform="translate(20 22)"><g class="cruz-petalos" fill="#683C10"><path transform="rotate(0)" d="M-4.05 -6V-14.9C-4.05 -17.2 -1.6 -19.05 0 -19.3C1.6 -19.05 4.05 -17.2 4.05 -14.9V-6Z"/><path transform="rotate(90)" d="M-4.05 -6V-14.9C-4.05 -17.2 -1.6 -19.05 0 -19.3C1.6 -19.05 4.05 -17.2 4.05 -14.9V-6Z"/><path transform="rotate(180)" d="M-4.05 -6V-14.9C-4.05 -17.2 -1.6 -19.05 0 -19.3C1.6 -19.05 4.05 -17.2 4.05 -14.9V-6Z"/><path transform="rotate(270)" d="M-4.05 -6V-14.9C-4.05 -17.2 -1.6 -19.05 0 -19.3C1.6 -19.05 4.05 -17.2 4.05 -14.9V-6Z"/></g><g class="cruz-rombos" fill="#683C10"><path d="M-13.21 -21.19L-9.22 -17.2Q-8.46 -16.44 -9.22 -15.68L-13.21 -11.69L-17.2 -15.68Q-17.96 -16.44 -17.2 -17.2Z"/><path d="M14.13 -21.19L18.12 -17.2Q18.88 -16.44 18.12 -15.68L14.13 -11.69L10.14 -15.68Q9.38 -16.44 10.14 -17.2Z"/><path d="M-13.21 11.81L-9.22 15.8Q-8.46 16.56 -9.22 17.32L-13.21 21.31L-17.2 17.32Q-17.96 16.56 -17.2 15.8Z"/><path d="M14.13 11.81L18.12 15.8Q18.88 16.56 18.12 17.32L14.13 21.31L10.14 17.32Q9.38 16.56 10.14 15.8Z"/></g><circle class="cruz-centro" r="3.85" fill="#B07E4A"/></g></svg>
+    </div>
+    <div class="portada__texto">
+      <p class="eyebrow eyebrow--claro">Pola de Lena · Camino del Salvador</p>
+      <h1 class="portada__tit" id="t-portada"><span class="ln"><span>Todos los caminos</span></span> <span class="ln"><span>llevan a Roma.</span></span></h1>
+      <p class="portada__baj">Albergue en Pola de Lena, a 250 m del Camino del Salvador. Al final de la bajada de Pajares.</p>
+      <div class="portada__acc">
+        <a class="btn btn--ocre" href="#reservar" data-reservar>Ver camas libres</a>
+        <a class="btn btn--hueco-claro" href="tel:+34677856645">Llamar <span class="num">677 856 645</span></a>
+      </div>
+      <p class="portada__vivo" id="vivo"><i aria-hidden="true"></i><span id="vivo-txt">Registro de 13:00 a 21:00</span> <b>· sin hora de cierre</b></p>
+    </div>
+    <p class="portada__pista" aria-hidden="true">Arrastra sobre la cruz</p>
+    <a class="portada__baja" href="#cifras"><span class="vh">Bajar a </span><span aria-hidden="true">Baja</span><span class="vh">las cifras del albergue</span></a>
+  </section>
+
+  <!-- ============ 2. en cifras ============ -->
+  <section class="sec cifras" id="cifras" aria-labelledby="t-cifras">
+    <div class="tramo tramo--0" data-tramo="0" aria-hidden="true"></div>
+    <div class="env">
+      <header class="sec-cab">
+        <p class="eyebrow">El albergue, en cifras</p>
+        <h2 id="t-cifras" data-partir>Lo que importa cuando llegas <em>con la mochila</em></h2>
+      </header>
+      <ol class="cifras__lista">
+        <li><b>250 <small>m</small></b><span>del Camino del Salvador</span></li>
+        <li><b>13:00</b><span>abre el registro</span></li>
+        <li><b class="cifras__txt">sin hora de cierre</b><span>te damos un código para entrar</span></li>
+        <li><b>20 <small>camas</small></b><span>en 2 dormitorios con literas</span></li>
+        <li><b>6</b><span>habitaciones privadas, dobles y cuádruples</span></li>
+        <li><b><small>desde</small> 15 <small>€</small></b><span>la cama, con ropa de cama</span></li>
+      </ol>
+      <p class="cifras__nota">Para peregrinos y para quien viene a Lena: el albergue no es solo del Camino. Abierto todo el año, en el centro de La Pola, a unos 200 m de la estación de tren.</p>
+    </div>
+  </section>
+
+  <!-- ============ (solo en la versión sobria) el albergue, de un vistazo ============ -->
+  <section class="sec vistazo" id="vistazo" aria-labelledby="t-vistazo">
+    <div class="env">
+      <h2 class="vistazo__tit" id="t-vistazo">El albergue, de un vistazo</h2>
+      <table class="vistazo__tabla">
+        <caption class="vh">Datos del Albergue Roma</caption>
+        <tbody>
+          <tr><th scope="row">Plazas</th><td>20 camas en 2 dormitorios con literas · 6 habitaciones privadas (dobles y cuádruples)</td></tr>
+          <tr><th scope="row">Precios desde</th><td>15 € la cama · 35 € la doble · 55 € la cuádruple (por noche)</td></tr>
+          <tr><th scope="row">Registro</th><td>de 13:00 a 21:00 (por confirmar)</td></tr>
+          <tr><th scope="row">Cierre</th><td>sin hora de cierre: te damos un código</td></tr>
+          <tr><th scope="row">Servicios</th><td>cocina de uso libre con microondas y nevera · lavadora y secadora · taquillas con llave · ropa de cama · guarda bicis cubierto · jardín · accesible</td></tr>
+          <tr><th scope="row">Distancias</th><td>250 m al Camino del Salvador · unos 200 m a la estación de Pola de Lena · 13,6 km a Mieres (etapa siguiente)</td></tr>
+          <tr><th scope="row">Abierto</th><td>todo el año · para peregrinos y para quien viene a Lena</td></tr>
+          <tr><th scope="row">Contacto</th><td><a href="tel:+34677856645">677 856 645</a> · <a href="mailto:albergueroma@gmail.com">albergueroma@gmail.com</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============ 3. habitaciones «Cada puerta, un pueblo de Lena» (módulo Puertas) ============ -->
+  <section id="habitaciones" class="sec habitaciones" aria-labelledby="t-habitaciones">
+    <div class="tramo" data-tramo="1" aria-hidden="true"></div>
+    <div class="env">
+      <header class="sec-cab">
+        <p class="eyebrow">Habitaciones</p>
+        <h2 id="t-habitaciones" data-partir>Cada puerta, <em>un pueblo de Lena</em></h2>
+        <p class="sec-cab__txt">En cada puerta, un cartel de madera con el nombre de un pueblo del concejo. Dos dormitorios con literas y seis habitaciones privadas.</p>
+      </header>
+    </div>
+    <div class="puertas-hueco" data-modulo="puertas">
+      <div class="env">
+        <ul class="habs" id="habs">
+          <li class="hab" data-hab="pajares">
+            <picture data-foto="dormitorio-grande"><source type="image/avif" srcset="img/fotos/dormitorio-grande-480.avif 480w, img/fotos/dormitorio-grande-800.avif 800w, img/fotos/dormitorio-grande-1280.avif 1280w" sizes="(max-width: 699px) 100vw, 30vw"><source type="image/webp" srcset="img/fotos/dormitorio-grande-480.webp 480w, img/fotos/dormitorio-grande-800.webp 800w, img/fotos/dormitorio-grande-1280.webp 1280w" sizes="(max-width: 699px) 100vw, 30vw"><img src="img/fotos/dormitorio-grande-800.jpg" srcset="img/fotos/dormitorio-grande-480.jpg 480w, img/fotos/dormitorio-grande-800.jpg 800w, img/fotos/dormitorio-grande-1280.jpg 1280w" sizes="(max-width: 699px) 100vw, 30vw" width="1280" height="960" alt="Dormitorio con literas de hierro negro, taquillas azules y un ventanal" loading="lazy" decoding="async"></picture>
+            <div class="hab__txt"><h3 class="hab__nombre">Pajares</h3><p class="hab__tipo">Dormitorio compartido, con literas</p><p class="hab__datos"><span>10 plazas</span><span>desde 15 € la cama</span></p><button type="button" class="btn btn--castano hab__btn" data-reservar="pajares">Ver si hay sitio</button></div>
+          </li>
+          <li class="hab" data-hab="carabanzo">
+            <picture data-foto="dormitorio-taquillas"><source type="image/avif" srcset="img/fotos/dormitorio-taquillas-480.avif 480w, img/fotos/dormitorio-taquillas-800.avif 800w, img/fotos/dormitorio-taquillas-1280.avif 1280w" sizes="(max-width: 699px) 100vw, 30vw"><source type="image/webp" srcset="img/fotos/dormitorio-taquillas-480.webp 480w, img/fotos/dormitorio-taquillas-800.webp 800w, img/fotos/dormitorio-taquillas-1280.webp 1280w" sizes="(max-width: 699px) 100vw, 30vw"><img src="img/fotos/dormitorio-taquillas-800.jpg" srcset="img/fotos/dormitorio-taquillas-480.jpg 480w, img/fotos/dormitorio-taquillas-800.jpg 800w, img/fotos/dormitorio-taquillas-1280.jpg 1280w" sizes="(max-width: 699px) 100vw, 30vw" width="1280" height="960" alt="Dormitorio con taquillas azules, la escalera de una litera y la puerta con el cartel «Carabanzo»" loading="lazy" decoding="async"></picture>
+            <div class="hab__txt"><h3 class="hab__nombre">Carabanzo</h3><p class="hab__tipo">Dormitorio compartido, con literas</p><p class="hab__datos"><span>10 plazas</span><span>desde 15 € la cama</span></p><button type="button" class="btn btn--castano hab__btn" data-reservar="carabanzo">Ver si hay sitio</button></div>
+          </li>
+          <li class="hab" data-hab="santa-marina">
+            <picture data-foto="dormitorio-focos"><source type="image/avif" srcset="img/fotos/dormitorio-focos-480.avif 480w, img/fotos/dormitorio-focos-800.avif 800w, img/fotos/dormitorio-focos-1280.avif 1280w" sizes="(max-width: 699px) 100vw, 30vw"><source type="image/webp" srcset="img/fotos/dormitorio-focos-480.webp 480w, img/fotos/dormitorio-focos-800.webp 800w, img/fotos/dormitorio-focos-1280.webp 1280w" sizes="(max-width: 699px) 100vw, 30vw"><img src="img/fotos/dormitorio-focos-800.jpg" srcset="img/fotos/dormitorio-focos-480.jpg 480w, img/fotos/dormitorio-focos-800.jpg 800w, img/fotos/dormitorio-focos-1280.jpg 1280w" sizes="(max-width: 699px) 100vw, 30vw" width="1280" height="960" alt="Habitación con literas de hierro y focos en el techo" loading="lazy" decoding="async"></picture>
+            <div class="hab__txt"><h3 class="hab__nombre">Santa Marina</h3><p class="hab__tipo">Habitación cuádruple, dos literas</p><p class="hab__datos"><span>4 plazas</span><span>desde 55 € la habitación</span></p><button type="button" class="btn btn--castano hab__btn" data-reservar="santa-marina">Ver si hay sitio</button></div>
+          </li>
+          <li class="hab" data-hab="someron">
+            <picture data-foto="litera"><source type="image/avif" srcset="img/fotos/litera-480.avif 480w, img/fotos/litera-800.avif 800w, img/fotos/litera-1280.avif 1280w" sizes="(max-width: 699px) 100vw, 30vw"><source type="image/webp" srcset="img/fotos/litera-480.webp 480w, img/fotos/litera-800.webp 800w, img/fotos/litera-1280.webp 1280w" sizes="(max-width: 699px) 100vw, 30vw"><img src="img/fotos/litera-800.jpg" srcset="img/fotos/litera-480.jpg 480w, img/fotos/litera-800.jpg 800w, img/fotos/litera-1280.jpg 1280w" sizes="(max-width: 699px) 100vw, 30vw" width="1280" height="960" alt="Litera de hierro negro con colcha beige" loading="lazy" decoding="async"></picture>
+            <div class="hab__txt"><h3 class="hab__nombre">Llanos de Somerón</h3><p class="hab__tipo">Habitación cuádruple, dos literas</p><p class="hab__datos"><span>4 plazas</span><span>desde 55 € la habitación</span></p><button type="button" class="btn btn--castano hab__btn" data-reservar="someron">Ver si hay sitio</button></div>
+          </li>
+          <li class="hab" data-hab="herias">
+            <picture data-foto="dormitorio-grande"><source type="image/avif" srcset="img/fotos/dormitorio-grande-480.avif 480w, img/fotos/dormitorio-grande-800.avif 800w, img/fotos/dormitorio-grande-1280.avif 1280w" sizes="(max-width: 699px) 100vw, 30vw"><source type="image/webp" srcset="img/fotos/dormitorio-grande-480.webp 480w, img/fotos/dormitorio-grande-800.webp 800w, img/fotos/dormitorio-grande-1280.webp 1280w" sizes="(max-width: 699px) 100vw, 30vw"><img src="img/fotos/dormitorio-grande-800.jpg" srcset="img/fotos/dormitorio-grande-480.jpg 480w, img/fotos/dormitorio-grande-800.jpg 800w, img/fotos/dormitorio-grande-1280.jpg 1280w" sizes="(max-width: 699px) 100vw, 30vw" width="1280" height="960" alt="Literas de hierro negro junto a un ventanal" loading="lazy" decoding="async"></picture>
+            <div class="hab__txt"><h3 class="hab__nombre">Herías</h3><p class="hab__tipo">Habitación cuádruple, dos literas</p><p class="hab__datos"><span>4 plazas</span><span>desde 55 € la habitación</span></p><button type="button" class="btn btn--castano hab__btn" data-reservar="herias">Ver si hay sitio</button></div>
+          </li>
+          <li class="hab" data-hab="campomanes">
+            <picture data-foto="dormitorio-taquillas"><source type="image/avif" srcset="img/fotos/dormitorio-taquillas-480.avif 480w, img/fotos/dormitorio-taquillas-800.avif 800w, img/fotos/dormitorio-taquillas-1280.avif 1280w" sizes="(max-width: 699px) 100vw, 30vw"><source type="image/webp" srcset="img/fotos/dormitorio-taquillas-480.webp 480w, img/fotos/dormitorio-taquillas-800.webp 800w, img/fotos/dormitorio-taquillas-1280.webp 1280w" sizes="(max-width: 699px) 100vw, 30vw"><img src="img/fotos/dormitorio-taquillas-800.jpg" srcset="img/fotos/dormitorio-taquillas-480.jpg 480w, img/fotos/dormitorio-taquillas-800.jpg 800w, img/fotos/dormitorio-taquillas-1280.jpg 1280w" sizes="(max-width: 699px) 100vw, 30vw" width="1280" height="960" alt="Taquillas azules y una litera de hierro" loading="lazy" decoding="async"></picture>
+            <div class="hab__txt"><h3 class="hab__nombre">Campomanes</h3><p class="hab__tipo">Habitación cuádruple, dos literas</p><p class="hab__datos"><span>4 plazas</span><span>desde 55 € la habitación</span></p><button type="button" class="btn btn--castano hab__btn" data-reservar="campomanes">Ver si hay sitio</button></div>
+          </li>
+          <li class="hab" data-hab="fresneo">
+            <picture data-foto="habitacion-dos-camas"><source type="image/avif" srcset="img/fotos/habitacion-dos-camas-480.avif 480w, img/fotos/habitacion-dos-camas-800.avif 800w, img/fotos/habitacion-dos-camas-1254.avif 1254w" sizes="(max-width: 699px) 100vw, 30vw"><source type="image/webp" srcset="img/fotos/habitacion-dos-camas-480.webp 480w, img/fotos/habitacion-dos-camas-800.webp 800w, img/fotos/habitacion-dos-camas-1254.webp 1254w" sizes="(max-width: 699px) 100vw, 30vw"><img src="img/fotos/habitacion-dos-camas-800.jpg" srcset="img/fotos/habitacion-dos-camas-480.jpg 480w, img/fotos/habitacion-dos-camas-800.jpg 800w, img/fotos/habitacion-dos-camas-1254.jpg 1254w" sizes="(max-width: 699px) 100vw, 30vw" width="1254" height="1254" alt="Habitación con dos camas, taquillas azules y una ventana" loading="lazy" decoding="async"></picture>
+            <div class="hab__txt"><h3 class="hab__nombre">Fresneo</h3><p class="hab__tipo">Habitación doble, dos camas</p><p class="hab__datos"><span>2 plazas</span><span>desde 35 € la habitación</span></p><button type="button" class="btn btn--castano hab__btn" data-reservar="fresneo">Ver si hay sitio</button></div>
+          </li>
+          <li class="hab" data-hab="vega-ciego">
+            <picture data-foto="habitacion-dos-camas"><source type="image/avif" srcset="img/fotos/habitacion-dos-camas-480.avif 480w, img/fotos/habitacion-dos-camas-800.avif 800w, img/fotos/habitacion-dos-camas-1254.avif 1254w" sizes="(max-width: 699px) 100vw, 30vw"><source type="image/webp" srcset="img/fotos/habitacion-dos-camas-480.webp 480w, img/fotos/habitacion-dos-camas-800.webp 800w, img/fotos/habitacion-dos-camas-1254.webp 1254w" sizes="(max-width: 699px) 100vw, 30vw"><img src="img/fotos/habitacion-dos-camas-800.jpg" srcset="img/fotos/habitacion-dos-camas-480.jpg 480w, img/fotos/habitacion-dos-camas-800.jpg 800w, img/fotos/habitacion-dos-camas-1254.jpg 1254w" sizes="(max-width: 699px) 100vw, 30vw" width="1254" height="1254" alt="Dos camas con taquillas azules al fondo" loading="lazy" decoding="async"></picture>
+            <div class="hab__txt"><h3 class="hab__nombre">Vega del Ciego</h3><p class="hab__tipo">Habitación doble, dos camas</p><p class="hab__datos"><span>2 plazas</span><span>desde 35 € la habitación</span></p><button type="button" class="btn btn--castano hab__btn" data-reservar="vega-ciego">Ver si hay sitio</button></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="env"><p class="nota-supuesto">De los carteles solo conocemos «Carabanzo»: los demás nombres y el reparto de las seis privadas son de ejemplo, a confirmar con el albergue.</p></div>
+  </section>
+
+  <!-- ============ 4. lo que hay ============ -->
+  <section id="hay" class="sec hay" aria-labelledby="t-hay">
+    <div class="tramo" data-tramo="2" aria-hidden="true"></div>
+    <div class="env">
+      <header class="sec-cab">
+        <p class="eyebrow">Lo que hay</p>
+        <h2 id="t-hay" data-partir>Cocina libre, lavadora <em>y una taquilla con llave</em></h2>
+        <p class="sec-cab__txt">Lo justo después de una etapa larga: dónde cocinar, dónde lavar la ropa y dónde dejar la mochila y la bici.</p>
+      </header>
+      <div class="hay__rejilla">
+        <figure class="hay__foto hay__foto--cocina" data-revela>
+          <button type="button" class="foto-btn" data-visor="cocina" aria-label="Ampliar: la cocina comedor"><picture data-foto="cocina"><source type="image/avif" srcset="img/fotos/cocina-480.avif 480w, img/fotos/cocina-800.avif 800w, img/fotos/cocina-1280.avif 1280w" sizes="(max-width: 899px) 100vw, 56vw"><source type="image/webp" srcset="img/fotos/cocina-480.webp 480w, img/fotos/cocina-800.webp 800w, img/fotos/cocina-1280.webp 1280w" sizes="(max-width: 899px) 100vw, 56vw"><img src="img/fotos/cocina-800.jpg" srcset="img/fotos/cocina-480.jpg 480w, img/fotos/cocina-800.jpg 800w, img/fotos/cocina-1280.jpg 1280w" sizes="(max-width: 899px) 100vw, 56vw" width="1280" height="960" alt="Cocina comedor con pared de ladrillo visto, una mesa oscura con seis sillas y una televisión" loading="lazy" decoding="async"></picture></button>
+          <figcaption>La cocina comedor: de uso libre, con microondas y nevera.</figcaption>
+        </figure>
+        <figure class="hay__foto hay__foto--taquillas" data-revela>
+          <button type="button" class="foto-btn" data-visor="dormitorio-grande" aria-label="Ampliar: el dormitorio grande"><picture data-foto="dormitorio-grande"><source type="image/avif" srcset="img/fotos/dormitorio-grande-480.avif 480w, img/fotos/dormitorio-grande-800.avif 800w, img/fotos/dormitorio-grande-1280.avif 1280w" sizes="(max-width: 899px) 100vw, 34vw"><source type="image/webp" srcset="img/fotos/dormitorio-grande-480.webp 480w, img/fotos/dormitorio-grande-800.webp 800w, img/fotos/dormitorio-grande-1280.webp 1280w" sizes="(max-width: 899px) 100vw, 34vw"><img src="img/fotos/dormitorio-grande-800.jpg" srcset="img/fotos/dormitorio-grande-480.jpg 480w, img/fotos/dormitorio-grande-800.jpg 800w, img/fotos/dormitorio-grande-1280.jpg 1280w" sizes="(max-width: 899px) 100vw, 34vw" width="1280" height="960" alt="Dormitorio con literas de hierro negro, taquillas azules y un ventanal" loading="lazy" decoding="async"></picture></button>
+          <figcaption>Taquillas individuales con llave, en azul.</figcaption>
+        </figure>
+        <figure class="hay__foto hay__foto--litera" data-revela>
+          <button type="button" class="foto-btn" data-visor="litera" aria-label="Ampliar: una litera"><picture data-foto="litera"><source type="image/avif" srcset="img/fotos/litera-480.avif 480w, img/fotos/litera-800.avif 800w, img/fotos/litera-1280.avif 1280w" sizes="(max-width: 899px) 50vw, 24vw"><source type="image/webp" srcset="img/fotos/litera-480.webp 480w, img/fotos/litera-800.webp 800w, img/fotos/litera-1280.webp 1280w" sizes="(max-width: 899px) 50vw, 24vw"><img src="img/fotos/litera-800.jpg" srcset="img/fotos/litera-480.jpg 480w, img/fotos/litera-800.jpg 800w, img/fotos/litera-1280.jpg 1280w" sizes="(max-width: 899px) 50vw, 24vw" width="1280" height="960" alt="Litera de hierro negro con colcha beige" loading="lazy" decoding="async"></picture></button>
+          <figcaption>Literas de hierro, con ropa de cama.</figcaption>
+        </figure>
+        <figure class="hay__foto hay__foto--bano" data-revela>
+          <button type="button" class="foto-btn" data-visor="bano-2" aria-label="Ampliar: un baño"><picture data-foto="bano-2"><source type="image/avif" srcset="img/fotos/bano-2-480.avif 480w, img/fotos/bano-2-800.avif 800w, img/fotos/bano-2-1280.avif 1280w" sizes="(max-width: 899px) 50vw, 24vw"><source type="image/webp" srcset="img/fotos/bano-2-480.webp 480w, img/fotos/bano-2-800.webp 800w, img/fotos/bano-2-1280.webp 1280w" sizes="(max-width: 899px) 50vw, 24vw"><img src="img/fotos/bano-2-800.jpg" srcset="img/fotos/bano-2-480.jpg 480w, img/fotos/bano-2-800.jpg 800w, img/fotos/bano-2-1280.jpg 1280w" sizes="(max-width: 899px) 50vw, 24vw" width="1280" height="960" alt="Baño con ducha de mampara y lavabo" loading="lazy" decoding="async"></picture></button>
+          <figcaption>Baños con ducha.</figcaption>
+        </figure>
+        <ul class="hay__lista">
+          <li><b>Cocina de uso libre</b><span>con microondas y nevera</span></li>
+          <li><b>Lavadora y secadora</b><span>pregunta el precio al llegar</span></li>
+          <li><b>Taquillas individuales</b><span>con llave</span></li>
+          <li><b>Ropa de cama</b><span>incluida</span></li>
+          <li><b>Guarda bicis cubierto</b><span>para quien hace el camino en bici</span></li>
+          <li><b>Jardín</b><span>para tender y estirar las piernas</span></li>
+          <li><b>Accesible</b><span>para personas con movilidad reducida</span></li>
+          <li><b>Calefacción</b><span>en las habitaciones</span></li>
+        </ul>
+      </div>
+      <p class="nota-supuesto">«Pregunta el precio»: algunos servicios tienen coste aparte y no sabemos cuáles; lo dirá el albergue.</p>
+    </div>
+  </section>
+
+  <!-- ============ 5. la bajada «De la nieve del puerto a tu litera» (2D: js/bajada.js; sin 3D por decisión de Álvaro) ============
+       Las cifras salen SOLO de img/terreno/bajada.json (scripts/terreno.py: trazado de OSM y MDT05 del IGN). -->
+  <section id="bajada" class="sec bajada" aria-labelledby="t-bajada" data-tono="oscuro">
+    <div class="tramo" data-tramo="3" aria-hidden="true"></div>
+    <div class="env">
+      <header class="sec-cab">
+        <p class="eyebrow eyebrow--claro">La bajada de Pajares</p>
+        <h2 id="t-bajada" data-partir>De la nieve del puerto <em>a tu litera</em></h2>
+        <p class="sec-cab__txt">Del Puerto de Pajares a la puerta del albergue hay 28,3 km por el Camino del Salvador: de 1.377 m a 316 m. Bajas de la cordillera por viejas veredas entre aldeas, hasta el río Lena. Y acaba aquí.</p>
+      </header>
+    </div>
+    <script type="application/json" id="bajada-datos">{"tramo":"Puerto de Pajares → Pola de Lena","camino":"Camino del Salvador","km":28.3,"metros":28319,"km_camino":28.1,"calle_m":179,"alt_puerto":1377,"alt_puerta":316,"mas_abajo":1061,"subida":611,"bajada":1672,"paradas":[{"id":"puerto","t":"Puerto de Pajares","km":0,"alt":1377,"lat":42.992673,"lon":-5.759495},{"id":"sanmiguel","t":"San Miguel del Río","km":6.08,"alt":722,"lat":43.015881,"lon":-5.785097},{"id":"fierros","t":"Puente de los Fierros","km":13.88,"alt":537,"lat":43.070746,"lon":-5.769283},{"id":"campomanes","t":"Campomanes","km":21.1,"alt":379,"lat":43.105418,"lon":-5.818556},{"id":"pola","t":"Pola de Lena","km":28.32,"alt":316,"lat":43.15677,"lon":-5.83017}],"pueblos":[{"id":"santamarina","t":"Santa Marina","km":7.22,"alt":767},{"id":"someron","t":"Llanos de Somerón","km":9.38,"alt":857},{"id":"fresneo","t":"Fresneo","km":14.52,"alt":565},{"id":"frecha","t":"La Frecha","km":18.91,"alt":598},{"id":"herias","t":"Herías","km":19.46,"alt":554},{"id":"santacristina","t":"Santa Cristina de Lena","km":23.98,"alt":392},{"id":"vegaciego","t":"Vega del Ciego","km":25.81,"alt":326}],"perfil":{"paso_m":100,"km":[0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1,1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8,1.9,2,2.1,2.2,2.3,2.4,2.5,2.6,2.7,2.8,2.9,3,3.1,3.2,3.3,3.4,3.5,3.6,3.7,3.8,3.9,4,4.1,4.2,4.3,4.4,4.5,4.6,4.7,4.8,4.9,5,5.1,5.2,5.3,5.4,5.5,5.6,5.7,5.8,5.9,6,6.1,6.2,6.3,6.4,6.5,6.6,6.7,6.8,6.9,7,7.1,7.2,7.3,7.4,7.5,7.6,7.7,7.8,7.9,8,8.1,8.2,8.3,8.4,8.5,8.6,8.7,8.8,8.9,9,9.1,9.2,9.3,9.4,9.5,9.6,9.7,9.8,9.9,10,10.1,10.2,10.3,10.4,10.5,10.6,10.7,10.8,10.9,11,11.1,11.2,11.3,11.4,11.5,11.6,11.7,11.8,11.9,12,12.1,12.2,12.3,12.4,12.5,12.6,12.7,12.8,12.9,13,13.1,13.2,13.3,13.4,13.5,13.6,13.7,13.8,13.9,14,14.1,14.2,14.3,14.4,14.5,14.6,14.7,14.8,14.9,15,15.1,15.2,15.3,15.4,15.5,15.6,15.7,15.8,15.9,16,16.1,16.2,16.3,16.4,16.5,16.6,16.7,16.8,16.9,17,17.1,17.2,17.3,17.4,17.5,17.6,17.7,17.8,17.9,18,18.1,18.2,18.3,18.4,18.5,18.6,18.7,18.8,18.9,19,19.1,19.2,19.3,19.4,19.5,19.6,19.7,19.8,19.9,20,20.1,20.2,20.3,20.4,20.5,20.6,20.7,20.8,20.9,21,21.1,21.2,21.3,21.4,21.5,21.6,21.7,21.8,21.9,22,22.1,22.2,22.3,22.4,22.5,22.6,22.7,22.8,22.9,23,23.1,23.2,23.3,23.4,23.5,23.6,23.7,23.8,23.9,24,24.1,24.2,24.3,24.4,24.5,24.6,24.7,24.8,24.9,25,25.1,25.2,25.3,25.4,25.5,25.6,25.7,25.8,25.9,26,26.1,26.2,26.3,26.4,26.5,26.6,26.7,26.8,26.9,27,27.1,27.2,27.3,27.4,27.5,27.6,27.7,27.8,27.9,28,28.1,28.2,28.3,28.32],"alt":[1377,1390,1399,1399,1388,1359,1328,1305,1284,1284,1269,1250,1239,1230,1213,1193,1183,1173,1157,1149,1138,1127,1134,1131,1128,1123,1105,1088,1073,1055,1032,1011,997,983,960,944,939,928,919,898,881,873,881,873,848,821,791,781,770,767,767,762,752,745,744,739,733,729,728,726,725,721,719,717,716,714,713,710,706,719,739,757,765,773,756,750,735,738,740,745,755,763,780,794,800,813,819,824,827,835,839,838,839,853,858,854,849,845,839,831,823,813,804,793,782,770,761,752,746,735,726,717,710,699,688,680,673,663,653,644,634,626,617,607,596,587,579,570,561,555,547,540,534,532,530,520,511,512,530,540,541,545,553,566,572,568,562,566,569,577,589,585,589,583,591,618,628,644,657,668,671,677,685,679,677,677,679,670,656,662,662,662,654,644,632,621,602,601,614,607,607,614,611,611,617,603,602,597,598,599,595,591,578,569,555,553,554,571,575,572,567,545,519,502,480,467,435,402,385,382,381,379,376,374,375,368,366,365,363,362,360,360,362,370,375,375,375,362,354,354,353,355,352,351,350,348,347,346,352,374,394,387,370,360,347,354,354,353,355,353,349,345,343,340,337,336,333,330,327,324,323,322,320,319,318,317,317,317,316,313,313,311,312,312,311,312,310,311,308,307,307,307,312,316,316]},"textos":{"remate":"Del puerto a tu litera: 1.061 m más abajo.","resumen":"28,3 km del Puerto de Pajares a la puerta, por el Camino del Salvador: de 1.377 m a 316 m.","honesto":"Trazado según OpenStreetMap y altitudes del MDT05 del IGN; las flechas del camino mandan."},"metodo":{"ruta":"OpenStreetMap, relación 2661682 «Camino del Salvador»: camino más corto por sus vías desde el punto más cercano al collado del Puerto de Pajares (a 123 m) hasta el pie de la calle del albergue; de ahí, 179 m por las calles de OSM hasta la puerta","distancia":"en planta, punto a punto de la línea de OSM","altitud":"MDT05 del IGN (malla de 5 m), interpolación bilineal cada 5 m y suavizado de 15 m","desnivel":"acumulado con umbral de 2 m","puerta":"C/ Canuto Hevia, punto de la calle de Nominatim (el portal 12 no está en OSM): supuesto","gronze":"Gronze da para la etapa 4 (Pajares → Pola de Lena) 23,8 km, +595 m / −1.273 m: es otro tramo (empieza en Pajares, no en el puerto)"},"fuente":"Camino y pueblos: © colaboradores de OpenStreetMap (ODbL) · Relieve MDT05: © Instituto Geográfico Nacional (CC BY 4.0)","fecha":"2026-10-23"}</script>
+    <div class="bajada__hueco" data-modulo="bajada">
+      <div class="env bajada__respaldo">
+        <img class="bajada__perfil-img" src="img/terreno/perfil.svg" width="1200" height="420" loading="lazy" decoding="async" alt="Perfil de la bajada: 28,3 km del Puerto de Pajares (1.377 m) a Pola de Lena (316 m), pasando por San Miguel del Río, Puente de los Fierros y Campomanes.">
+        <ol class="bajada__pueblos" aria-label="Los pueblos de la bajada, por orden, con su km y su altitud">
+          <li><b>Puerto de Pajares</b><span>km 0,0 · 1.377 m</span></li>
+          <li><b>San Miguel del Río</b><span>km 6,1 · 722 m</span></li>
+          <li><b>Santa Marina</b><span>km 7,2 · 767 m</span></li>
+          <li><b>Llanos de Somerón</b><span>km 9,4 · 857 m</span></li>
+          <li><b>Puente de los Fierros</b><span>km 13,9 · 537 m</span></li>
+          <li><b>Fresneo</b><span>km 14,5 · 565 m</span></li>
+          <li><b>Herías</b><span>km 19,5 · 554 m</span></li>
+          <li><b>Campomanes</b><span>km 21,1 · 379 m</span></li>
+          <li><b>Santa Cristina de Lena</b><span>km 24,0 · 392 m</span></li>
+          <li><b>Vega del Ciego</b><span>km 25,8 · 326 m</span></li>
+          <li class="es-meta"><b>Pola de Lena · Albergue Roma</b><span>km 28,3 · 316 m</span></li>
+        </ol>
+      </div>
+    </div>
+    <div class="env bajada__pie">
+      <p>Las guías (Gronze) dan la etapa 4 desde el pueblo de Pajares: 23,8 km, 595 m de subida y 1.273 m de bajada. Aquí se cuenta desde el puerto, donde acaba la etapa 3. Trazado según <a href="https://www.openstreetmap.org/relation/2661682" rel="noopener" target="_blank">OpenStreetMap</a> y altitudes del MDT05 del IGN: las flechas del camino mandan.</p>
+      <a class="btn btn--ocre" href="#reservar" data-reservar>Ver camas libres</a>
+    </div>
+  </section>
+
+  <!-- ============ 6. Lena alrededor ============ -->
+  <section id="lena" class="sec lena" aria-labelledby="t-lena">
+    <div class="tramo" data-tramo="4" aria-hidden="true"></div>
+    <div class="env">
+      <header class="sec-cab">
+        <p class="eyebrow">Lena alrededor</p>
+        <h2 id="t-lena" data-partir>Lo que has visto hoy, <em>y lo que tienes cerca</em></h2>
+        <p class="sec-cab__txt">Del puerto a La Pola el camino pasa por aldeas con galería, prados con caballos y una iglesia prerrománica.</p>
+      </header>
+    </div>
+    <div class="lena__serie">
+      <figure class="lena__foto lena__foto--ancha">
+        <div class="lena__marco" data-paralaje><picture data-foto="santa-cristina-1"><source type="image/avif" srcset="img/fotos/santa-cristina-1-480.avif 480w, img/fotos/santa-cristina-1-800.avif 800w, img/fotos/santa-cristina-1-1280.avif 1280w, img/fotos/santa-cristina-1-1920.avif 1920w" sizes="100vw"><source type="image/webp" srcset="img/fotos/santa-cristina-1-480.webp 480w, img/fotos/santa-cristina-1-800.webp 800w, img/fotos/santa-cristina-1-1280.webp 1280w, img/fotos/santa-cristina-1-1920.webp 1920w" sizes="100vw"><img src="img/fotos/santa-cristina-1-800.jpg" srcset="img/fotos/santa-cristina-1-480.jpg 480w, img/fotos/santa-cristina-1-800.jpg 800w, img/fotos/santa-cristina-1-1280.jpg 1280w, img/fotos/santa-cristina-1-1920.jpg 1920w" sizes="100vw" width="1920" height="1280" alt="La iglesia de Santa Cristina de Lena, de piedra, sobre un prado verde y con el valle al fondo" loading="lazy" decoding="async"></picture></div>
+        <figcaption><b>Santa Cristina de Lena</b><span>Prerrománico, en la propia etapa: el camino pasa junto a ella entre Campomanes y La Pola.</span><a class="credito" href="https://commons.wikimedia.org/wiki/File:Camino%20de%20San%20Salvador%2C%20Iglesia%20de%20Santa%20Cristina%20de%20Lena%2C%2001.jpg" rel="noopener" target="_blank">Foto: Mongolo1984 · CC BY-SA 4.0</a></figcaption>
+      </figure>
+      <div class="env lena__par">
+        <figure class="lena__foto lena__foto--alta">
+          <div class="lena__marco" data-paralaje><picture data-foto="mar-de-nubes-1"><source type="image/avif" srcset="img/fotos/mar-de-nubes-1-480.avif 480w, img/fotos/mar-de-nubes-1-800.avif 800w, img/fotos/mar-de-nubes-1-1280.avif 1280w, img/fotos/mar-de-nubes-1-1920.avif 1920w" sizes="(max-width: 899px) 100vw, 46vw"><source type="image/webp" srcset="img/fotos/mar-de-nubes-1-480.webp 480w, img/fotos/mar-de-nubes-1-800.webp 800w, img/fotos/mar-de-nubes-1-1280.webp 1280w, img/fotos/mar-de-nubes-1-1920.webp 1920w" sizes="(max-width: 899px) 100vw, 46vw"><img src="img/fotos/mar-de-nubes-1-800.jpg" srcset="img/fotos/mar-de-nubes-1-480.jpg 480w, img/fotos/mar-de-nubes-1-800.jpg 800w, img/fotos/mar-de-nubes-1-1280.jpg 1280w, img/fotos/mar-de-nubes-1-1920.jpg 1920w" sizes="(max-width: 899px) 100vw, 46vw" width="1920" height="1280" alt="Un sendero entre prados y estacas de madera, con el valle cubierto por un mar de nubes" loading="lazy" decoding="async"></picture></div>
+          <figcaption><b>Entre Santa Marina y Llanos de Somerón</b><span>Una mañana con el valle bajo las nubes.</span><a class="credito" href="https://commons.wikimedia.org/wiki/File:Camino%20de%20San%20Salvador%2C%20tratto%20del%20cammino%20tra%20Santa%20Marina%20e%20Llanos%20de%20Somer%C3%B3n%2002.jpg" rel="noopener" target="_blank">Foto: Mongolo1984 · CC BY-SA 4.0</a></figcaption>
+        </figure>
+        <figure class="lena__foto lena__foto--baja">
+          <div class="lena__marco" data-paralaje><picture data-foto="bajada-caballos"><source type="image/avif" srcset="img/fotos/bajada-caballos-480.avif 480w, img/fotos/bajada-caballos-800.avif 800w, img/fotos/bajada-caballos-1280.avif 1280w, img/fotos/bajada-caballos-1920.avif 1920w" sizes="(max-width: 899px) 100vw, 40vw"><source type="image/webp" srcset="img/fotos/bajada-caballos-480.webp 480w, img/fotos/bajada-caballos-800.webp 800w, img/fotos/bajada-caballos-1280.webp 1280w, img/fotos/bajada-caballos-1920.webp 1920w" sizes="(max-width: 899px) 100vw, 40vw"><img src="img/fotos/bajada-caballos-800.jpg" srcset="img/fotos/bajada-caballos-480.jpg 480w, img/fotos/bajada-caballos-800.jpg 800w, img/fotos/bajada-caballos-1280.jpg 1280w, img/fotos/bajada-caballos-1920.jpg 1920w" sizes="(max-width: 899px) 100vw, 40vw" width="1920" height="1280" alt="Dos caballos castaños juntos en un prado de la bajada" loading="lazy" decoding="async"></picture></div>
+          <figcaption><b>Entre el puerto y Pajares</b><span>Caballos sueltos en los prados de la bajada.</span><a class="credito" href="https://commons.wikimedia.org/wiki/File:Camino%20de%20San%20Salvador%2C%20tratto%20del%20cammino%20tra%20Puerto%20de%20Pajares%20e%20Pajares%2012.jpg" rel="noopener" target="_blank">Foto: Mongolo1984 · CC BY-SA 4.0</a></figcaption>
+        </figure>
+      </div>
+      <figure class="lena__foto lena__foto--ancha lena__foto--der">
+        <div class="lena__marco" data-paralaje><picture data-foto="herias-galeria"><source type="image/avif" srcset="img/fotos/herias-galeria-480.avif 480w, img/fotos/herias-galeria-800.avif 800w, img/fotos/herias-galeria-1280.avif 1280w, img/fotos/herias-galeria-1920.avif 1920w" sizes="100vw"><source type="image/webp" srcset="img/fotos/herias-galeria-480.webp 480w, img/fotos/herias-galeria-800.webp 800w, img/fotos/herias-galeria-1280.webp 1280w, img/fotos/herias-galeria-1920.webp 1920w" sizes="100vw"><img src="img/fotos/herias-galeria-800.jpg" srcset="img/fotos/herias-galeria-480.jpg 480w, img/fotos/herias-galeria-800.jpg 800w, img/fotos/herias-galeria-1280.jpg 1280w, img/fotos/herias-galeria-1920.jpg 1920w" sizes="100vw" width="1920" height="1280" alt="Una casa de Herías con una galería de madera acristalada en lo alto" loading="lazy" decoding="async"></picture></div>
+        <figcaption><b>Herías</b><span>Una casa con su galería, junto al camino.</span><a class="credito" href="https://commons.wikimedia.org/wiki/File:Camino%20de%20San%20Salvador%2C%20Her%C3%ADas%2006.jpg" rel="noopener" target="_blank">Foto: Mongolo1984 · CC BY-SA 4.0</a></figcaption>
+      </figure>
+      <div class="env lena__par lena__par--inv">
+        <figure class="lena__foto lena__foto--baja">
+          <div class="lena__marco" data-paralaje><picture data-foto="rio-lena"><source type="image/avif" srcset="img/fotos/rio-lena-480.avif 480w, img/fotos/rio-lena-800.avif 800w, img/fotos/rio-lena-1280.avif 1280w, img/fotos/rio-lena-1920.avif 1920w" sizes="(max-width: 899px) 100vw, 40vw"><source type="image/webp" srcset="img/fotos/rio-lena-480.webp 480w, img/fotos/rio-lena-800.webp 800w, img/fotos/rio-lena-1280.webp 1280w, img/fotos/rio-lena-1920.webp 1920w" sizes="(max-width: 899px) 100vw, 40vw"><img src="img/fotos/rio-lena-800.jpg" srcset="img/fotos/rio-lena-480.jpg 480w, img/fotos/rio-lena-800.jpg 800w, img/fotos/rio-lena-1280.jpg 1280w, img/fotos/rio-lena-1920.jpg 1920w" sizes="(max-width: 899px) 100vw, 40vw" width="1920" height="1280" alt="El río Lena bajando entre árboles en Vega del Ciego" loading="lazy" decoding="async"></picture></div>
+          <figcaption><b>Vega del Ciego</b><span>El río Lena, ya cerca de La Pola.</span><a class="credito" href="https://commons.wikimedia.org/wiki/File:Camino%20de%20San%20Salvador%2C%20Vega%20del%20Ciego%2C%20r%C3%ADo%20Lena%2001.jpg" rel="noopener" target="_blank">Foto: Mongolo1984 · CC BY-SA 4.0</a></figcaption>
+        </figure>
+        <figure class="lena__foto lena__foto--alta">
+          <div class="lena__marco" data-paralaje><picture data-foto="pola-san-martin-noche"><source type="image/avif" srcset="img/fotos/pola-san-martin-noche-480.avif 480w, img/fotos/pola-san-martin-noche-800.avif 800w, img/fotos/pola-san-martin-noche-1280.avif 1280w, img/fotos/pola-san-martin-noche-1920.avif 1920w" sizes="(max-width: 899px) 100vw, 46vw"><source type="image/webp" srcset="img/fotos/pola-san-martin-noche-480.webp 480w, img/fotos/pola-san-martin-noche-800.webp 800w, img/fotos/pola-san-martin-noche-1280.webp 1280w, img/fotos/pola-san-martin-noche-1920.webp 1920w" sizes="(max-width: 899px) 100vw, 46vw"><img src="img/fotos/pola-san-martin-noche-800.jpg" srcset="img/fotos/pola-san-martin-noche-480.jpg 480w, img/fotos/pola-san-martin-noche-800.jpg 800w, img/fotos/pola-san-martin-noche-1280.jpg 1280w, img/fotos/pola-san-martin-noche-1920.jpg 1920w" sizes="(max-width: 899px) 100vw, 46vw" width="1920" height="1280" alt="La iglesia de San Martín, en Pola de Lena, iluminada al anochecer entre edificios" loading="lazy" decoding="async"></picture></div>
+          <figcaption><b>La Pola, de noche</b><span>San Martín, a unos pasos del albergue.</span><a class="credito" href="https://commons.wikimedia.org/wiki/File:Camino%20de%20San%20Salvador%2C%20La%20Pola%20de%20Lena%2C%20Iglesia%20de%20San%20Mart%C3%ADn%20el%20Real%2001.jpg" rel="noopener" target="_blank">Foto: Mongolo1984 · CC BY-SA 4.0</a></figcaption>
+        </figure>
+      </div>
+      <div class="env lena__manana">
+        <figure class="lena__foto lena__foto--flecha">
+          <div class="lena__marco"><picture data-foto="san-miguel-flecha"><source type="image/avif" srcset="img/fotos/san-miguel-flecha-480.avif 480w, img/fotos/san-miguel-flecha-800.avif 800w, img/fotos/san-miguel-flecha-1280.avif 1280w, img/fotos/san-miguel-flecha-1920.avif 1920w" sizes="(max-width: 899px) 60vw, 26vw"><source type="image/webp" srcset="img/fotos/san-miguel-flecha-480.webp 480w, img/fotos/san-miguel-flecha-800.webp 800w, img/fotos/san-miguel-flecha-1280.webp 1280w, img/fotos/san-miguel-flecha-1920.webp 1920w" sizes="(max-width: 899px) 60vw, 26vw"><img src="img/fotos/san-miguel-flecha-800.jpg" srcset="img/fotos/san-miguel-flecha-480.jpg 480w, img/fotos/san-miguel-flecha-800.jpg 800w, img/fotos/san-miguel-flecha-1280.jpg 1280w, img/fotos/san-miguel-flecha-1920.jpg 1920w" sizes="(max-width: 899px) 60vw, 26vw" width="1920" height="1280" alt="Un poste con la concha y la flecha amarilla del Camino, en San Miguel del Río" loading="lazy" decoding="async"></picture></div>
+          <figcaption><b>San Miguel del Río</b><a class="credito" href="https://commons.wikimedia.org/wiki/File:Camino%20de%20San%20Salvador%2C%20San%20Miguel%20del%20R%C3%ADo%2003.jpg" rel="noopener" target="_blank">Foto: Mongolo1984 · CC BY-SA 4.0</a></figcaption>
+        </figure>
+        <div class="lena__manana-txt">
+          <p class="eyebrow">Y mañana</p>
+          <p class="lena__mieres">A Mieres: <b>13,6 km</b>, llana, junto al río.</p>
+          <p>La etapa 5 sigue los ríos Lena y Caudal, casi toda sobre asfalto. Desde Mieres, la última etapa llega a Oviedo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 7. reservar: el simulador de camas (DEMOSTRACIÓN, js/reserva.js) ============ -->
+  <section class="sec reservar" id="reservar" aria-labelledby="t-reservar">
+  <div class="tramo" data-tramo="5" aria-hidden="true"></div>
+  <div class="env">
+    <header class="sec-cab">
+      <p class="eyebrow">Reservar</p>
+      <h2 id="t-reservar" data-partir>Tu cama, <em>noche a noche</em></h2>
+      <p class="sec-cab__txt">Elige las noches y luego la cama en el plano: arriba o abajo, en uno de los dos dormitorios. O una habitación privada entera. También puedes llamar al <a class="enlace" href="tel:+34677856645">677 856 645</a> o escribir a <a class="enlace" href="mailto:albergueroma@gmail.com">albergueroma@gmail.com</a>.</p>
+    </header>
+    <p class="demo" role="note"><b>Demostración.</b> Así funcionaría la reserva directa: la ocupación es de ejemplo, los precios son los «desde» de Gronze y no se envía, se guarda ni se cobra nada.</p>
+    <div class="motor" id="motor">
+      <noscript><p class="motor__sin">Para reservar sin JavaScript, llama al <a href="tel:+34677856645">677 856 645</a>.</p></noscript>
+    </div>
+    <div class="reservar__saber">
+      <section class="saber" aria-labelledby="saber-tit">
+        <h3 id="saber-tit">Lo que hay que saber</h3>
+        <dl class="saber__lista">
+          <div><dt>Registro</dt><dd>De 13:00 a 21:00. Por confirmar: en otra ficha pone de 15:00 a 22:00.</dd></div>
+          <div><dt>Hora de cierre</dt><dd>No hay. Al llegar te dan un código para entrar y salir.</dd></div>
+          <div><dt>Ropa de cama</dt><dd>Incluida en el precio.</dd></div>
+          <div><dt>Pago</dt><dd>A la llegada (supuesto, a confirmar con el albergue).</dd></div>
+          <div><dt>Para quién</dt><dd>Para peregrinos y para quien viene a Lena. Hablan español e inglés.</dd></div>
+          <div><dt>Abierto</dt><dd>Todo el año.</dd></div>
+        </dl>
+      </section>
+    </div>
+  </div>
+</section>
+
+  <!-- ============ 8. cómo llegar ============ -->
+  <section class="sec llegar" id="llegar" aria-labelledby="t-llegar">
+  <div class="env llegar__in">
+    <div class="llegar__txt">
+      <p class="eyebrow">Cómo llegar</p>
+      <h2 id="t-llegar" data-partir>C/ Canuto Hevia, 12 · <em>La Pola</em></h2>
+      <address class="llegar__dir">
+        Albergue Roma<br>
+        C/ Canuto Hevia, 12<br>
+        33630 La Pola (Lena), Asturias
+      </address>
+      <ul class="llegar__modos">
+        <li><b>A pie</b><span>A 250 m del Camino del Salvador.</span></li>
+        <li><b>En tren</b><span>La estación de Pola de Lena está a unos 200 m.</span></li>
+        <li><b>En coche</b><span>Sin aparcamiento propio (por confirmar).</span></li>
+      </ul>
+      <ul class="contacto">
+        <li><a href="tel:+34677856645"><b class="num">677 856 645</b><span>Teléfono</span></a></li>
+        <li><a href="mailto:albergueroma@gmail.com"><b>albergueroma@gmail.com</b><span>Correo</span></a></li>
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Albergue+Roma%2C+Calle+Canuto+Hevia+12%2C+Pola+de+Lena" rel="noopener" target="_blank"><b>Abrir en Google Maps</b><span>Para ir en coche o andando</span></a></li>
+      </ul>
+    </div>
+    <div class="mapa" id="mapa">
+      <div class="map-consent" id="mapa-consent">
+        <svg class="map-consent__cruz" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 44" aria-hidden="true" focusable="false"><g transform="translate(20 22)"><g class="cruz-petalos" fill="#683C10"><path transform="rotate(0)" d="M-4.05 -6V-14.9C-4.05 -17.2 -1.6 -19.05 0 -19.3C1.6 -19.05 4.05 -17.2 4.05 -14.9V-6Z"/><path transform="rotate(90)" d="M-4.05 -6V-14.9C-4.05 -17.2 -1.6 -19.05 0 -19.3C1.6 -19.05 4.05 -17.2 4.05 -14.9V-6Z"/><path transform="rotate(180)" d="M-4.05 -6V-14.9C-4.05 -17.2 -1.6 -19.05 0 -19.3C1.6 -19.05 4.05 -17.2 4.05 -14.9V-6Z"/><path transform="rotate(270)" d="M-4.05 -6V-14.9C-4.05 -17.2 -1.6 -19.05 0 -19.3C1.6 -19.05 4.05 -17.2 4.05 -14.9V-6Z"/></g><g class="cruz-rombos" fill="#683C10"><path d="M-13.21 -21.19L-9.22 -17.2Q-8.46 -16.44 -9.22 -15.68L-13.21 -11.69L-17.2 -15.68Q-17.96 -16.44 -17.2 -17.2Z"/><path d="M14.13 -21.19L18.12 -17.2Q18.88 -16.44 18.12 -15.68L14.13 -11.69L10.14 -15.68Q9.38 -16.44 10.14 -17.2Z"/><path d="M-13.21 11.81L-9.22 15.8Q-8.46 16.56 -9.22 17.32L-13.21 21.31L-17.2 17.32Q-17.96 16.56 -17.2 15.8Z"/><path d="M14.13 11.81L18.12 15.8Q18.88 16.56 18.12 17.32L14.13 21.31L10.14 17.32Q9.38 16.56 10.14 15.8Z"/></g><circle class="cruz-centro" r="3.85" fill="#B07E4A"/></g></svg>
+        <p>El mapa es de Google y, al cargarlo, Google puede guardar cookies en tu navegador.</p>
+        <button type="button" class="btn btn--castano" id="mapa-btn">Ver el mapa</button>
+        <p class="map-consent__coord num">La calle: 43,15677 · −5,83017</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ pie: los cinco arcos que se fueron dibujando por la página se juntan bajo la línea
+     y forman el puente del logo entero (el objeto que se completa en el pie) ============ -->
+<footer class="pie" id="pie" data-tono="oscuro">
+  <div class="env">
+    <div class="pie__puente" id="pie-puente">
+      <svg id="pie-logo" class="pie__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 140" aria-hidden="true" focusable="false"><g class="logo-cruz" fill="#683C10" transform="translate(21.1 27.86)"><path transform="rotate(0)" d="M-4.05 -6V-14.9C-4.05 -17.2 -1.6 -19.05 0 -19.3C1.6 -19.05 4.05 -17.2 4.05 -14.9V-6Z"/><path transform="rotate(90)" d="M-4.05 -6V-14.9C-4.05 -17.2 -1.6 -19.05 0 -19.3C1.6 -19.05 4.05 -17.2 4.05 -14.9V-6Z"/><path transform="rotate(180)" d="M-4.05 -6V-14.9C-4.05 -17.2 -1.6 -19.05 0 -19.3C1.6 -19.05 4.05 -17.2 4.05 -14.9V-6Z"/><path transform="rotate(270)" d="M-4.05 -6V-14.9C-4.05 -17.2 -1.6 -19.05 0 -19.3C1.6 -19.05 4.05 -17.2 4.05 -14.9V-6Z"/><path d="M-13.21 -21.19L-9.22 -17.2Q-8.46 -16.44 -9.22 -15.68L-13.21 -11.69L-17.2 -15.68Q-17.96 -16.44 -17.2 -17.2Z"/><path d="M14.13 -21.19L18.12 -17.2Q18.88 -16.44 18.12 -15.68L14.13 -11.69L10.14 -15.68Q9.38 -16.44 10.14 -17.2Z"/><path d="M-13.21 11.81L-9.22 15.8Q-8.46 16.56 -9.22 17.32L-13.21 21.31L-17.2 17.32Q-17.96 16.56 -17.2 15.8Z"/><path d="M14.13 11.81L18.12 15.8Q18.88 16.56 18.12 17.32L14.13 21.31L10.14 17.32Q9.38 16.56 10.14 15.8Z"/><circle class="cruz-centro" r="3.85" fill="#B07E4A"/></g><g class="logo-letras" fill="none" stroke="#1A1612" stroke-width="3.9" stroke-linecap="round" stroke-linejoin="round"><path d="M47.95 29.8L54.95 9.4Q56.2 7.3 57.45 9.4L64.5 29.8"/><path d="M70.58 8.85V29.8H81.6"/><path d="M87.88 29.8V9.1H97.7Q99.72 9.1 99.72 11.1V17.05Q99.72 19.05 97.7 19.05H94.3M97.9 19.05Q100.32 19.05 100.32 21.5V27.8Q100.32 29.8 98.3 29.8H87.88"/><path d="M119.4 9.1H108.31V29.8H119.6"/><path d="M125.46 29.8V9.1H135.4Q137.4 9.1 137.4 11.1V17.4Q137.4 19.4 135.4 19.4H130.9M133.6 19.6L139.4 29.8"/><path d="M157.56 14.4V11.8Q157.56 9.2 154.96 9.2H148.16Q145.56 9.2 145.56 11.8V27.1Q145.56 29.7 148.16 29.7H155.12Q157.72 29.7 157.72 27.1V19.9"/><path d="M165.82 8.8V26.4Q165.82 29.5 168.92 29.5H175.43Q178.53 29.5 178.53 26.4V8.8"/><path d="M196.7 9.1H186.65V29.8H197.3"/><path d="M212.74 29.8V9.1H222.68Q224.68 9.1 224.68 11.1V17.4Q224.68 19.4 222.68 19.4H218.18M220.88 19.6L226.68 29.8"/><path d="M235.9 9.07H242.37Q245.37 9.07 245.37 12.07V26.81Q245.37 29.81 242.37 29.81H235.9Q232.9 29.81 232.9 26.81V12.07Q232.9 9.07 235.9 9.07Z"/><path d="M253.36 29.8V9.4Q253.36 8.9 254.2 8.9H255L262.35 29.1L269.7 8.9H270.5Q271.34 8.9 271.34 9.4V29.8"/><path d="M276.89 29.8L283.89 9.4Q285.14 7.3 286.39 9.4L293.44 29.8"/></g><g class="logo-puntos" fill="#B07E4A"><circle cx="56.3" cy="24.35" r="2.5"/><circle cx="115.6" cy="19" r="2.55"/><circle cx="152.1" cy="20.45" r="2.55"/><circle cx="193.6" cy="19" r="2.55"/><circle cx="285.55" cy="24.5" r="2.5"/></g><path class="logo-lugar" fill="#B07E4A" transform="translate(233 48.9) scale(0.01126 0.01257)" d="M100 0V-700H315Q381 -700 432.0 -672.5Q483 -645 511.5 -596.0Q540 -547 540 -483Q540 -420 514.5 -371.0Q489 -322 444.5 -294.0Q400 -266 342 -266H164V0ZM164 -325H342Q401 -325 439.0 -369.0Q477 -413 477 -483Q477 -554 431.5 -598.0Q386 -642 315 -642H164ZM861 12Q789 12 733.5 -21.5Q678 -55 646.5 -114.0Q615 -173 615 -250Q615 -327 646.0 -386.0Q677 -445 732.5 -478.5Q788 -512 859 -512Q931 -512 986.5 -478.5Q1042 -445 1073.0 -386.0Q1104 -327 1104 -250Q1104 -173 1073.0 -114.0Q1042 -55 987.0 -21.5Q932 12 861 12ZM861 -43Q915 -43 956.0 -69.5Q997 -96 1020.5 -142.5Q1044 -189 1044 -250Q1044 -311 1020.5 -357.5Q997 -404 955.0 -430.5Q913 -457 859 -457Q805 -457 763.5 -430.5Q722 -404 698.5 -357.5Q675 -311 675 -250Q675 -189 699.0 -142.5Q723 -96 765.0 -69.5Q807 -43 861 -43ZM1224 0V-700H1284V0ZM1591 12Q1503 12 1453.5 -28.5Q1404 -69 1404 -141Q1404 -215 1453.5 -256.0Q1503 -297 1591 -297H1739Q1735 -377 1702.0 -417.0Q1669 -457 1601 -457Q1556 -457 1525.5 -439.0Q1495 -421 1475 -383L1421 -407Q1442 -443 1468.5 -466.0Q1495 -489 1528.0 -500.5Q1561 -512 1601 -512Q1668 -512 1712.0 -485.0Q1756 -458 1778.0 -404.0Q1800 -350 1800 -268V0H1745L1740 -70Q1717 -31 1679.0 -9.5Q1641 12 1591 12ZM1587 -43Q1635 -43 1669.5 -62.5Q1704 -82 1722.0 -120.0Q1740 -158 1740 -214V-242H1599Q1527 -242 1495.5 -215.5Q1464 -189 1464 -141Q1464 -95 1496.5 -69.0Q1529 -43 1587 -43ZM2381 12Q2315 12 2264.0 -21.5Q2213 -55 2184.0 -114.5Q2155 -174 2155 -250Q2155 -327 2184.0 -386.0Q2213 -445 2264.0 -478.5Q2315 -512 2381 -512Q2438 -512 2483.5 -484.5Q2529 -457 2557 -409V-700H2617V0H2560L2557 -91Q2529 -43 2483.5 -15.5Q2438 12 2381 12ZM2393 -42Q2441 -42 2478.0 -68.5Q2515 -95 2536.0 -142.0Q2557 -189 2557 -249V-250Q2557 -311 2536.0 -358.0Q2515 -405 2478.0 -431.5Q2441 -458 2392 -458Q2340 -458 2300.0 -431.5Q2260 -405 2237.5 -358.0Q2215 -311 2215 -250Q2215 -189 2238.0 -142.0Q2261 -95 2301.0 -68.5Q2341 -42 2393 -42ZM2983 12Q2911 12 2855.5 -21.5Q2800 -55 2768.5 -114.0Q2737 -173 2737 -250Q2737 -327 2768.0 -386.0Q2799 -445 2853.5 -478.5Q2908 -512 2978 -512Q3049 -512 3098.5 -477.5Q3148 -443 3174.0 -382.5Q3200 -322 3200 -243H2796Q2801 -148 2851.5 -95.5Q2902 -43 2983 -43Q3041 -43 3081.5 -71.5Q3122 -100 3145 -145L3195 -114Q3176 -77 3145.5 -48.5Q3115 -20 3074.0 -4.0Q3033 12 2983 12ZM2802 -298H3135Q3132 -346 3112.0 -381.5Q3092 -417 3058.0 -437.0Q3024 -457 2978 -457Q2933 -457 2894.0 -437.0Q2855 -417 2830.5 -381.0Q2806 -345 2802 -298ZM3585 0V-700H3649V-58H3988V0ZM4289 12Q4217 12 4161.5 -21.5Q4106 -55 4074.5 -114.0Q4043 -173 4043 -250Q4043 -327 4074.0 -386.0Q4105 -445 4159.5 -478.5Q4214 -512 4284 -512Q4355 -512 4404.5 -477.5Q4454 -443 4480.0 -382.5Q4506 -322 4506 -243H4102Q4107 -148 4157.5 -95.5Q4208 -43 4289 -43Q4347 -43 4387.5 -71.5Q4428 -100 4451 -145L4501 -114Q4482 -77 4451.5 -48.5Q4421 -20 4380.0 -4.0Q4339 12 4289 12ZM4108 -298H4441Q4438 -346 4418.0 -381.5Q4398 -417 4364.0 -437.0Q4330 -457 4284 -457Q4239 -457 4200.0 -437.0Q4161 -417 4136.5 -381.0Q4112 -345 4108 -298ZM4616 0V-500H4672L4675 -422Q4700 -466 4741.0 -489.0Q4782 -512 4838 -512Q4896 -512 4940.5 -488.5Q4985 -465 5010.5 -414.0Q5036 -363 5035 -279V0H4975V-256Q4975 -339 4955.5 -382.0Q4936 -425 4902.5 -440.5Q4869 -456 4827 -456Q4756 -456 4716.0 -403.5Q4676 -351 4676 -257V0ZM5327 12Q5239 12 5189.5 -28.5Q5140 -69 5140 -141Q5140 -215 5189.5 -256.0Q5239 -297 5327 -297H5475Q5471 -377 5438.0 -417.0Q5405 -457 5337 -457Q5292 -457 5261.5 -439.0Q5231 -421 5211 -383L5157 -407Q5178 -443 5204.5 -466.0Q5231 -489 5264.0 -500.5Q5297 -512 5337 -512Q5404 -512 5448.0 -485.0Q5492 -458 5514.0 -404.0Q5536 -350 5536 -268V0H5481L5476 -70Q5453 -31 5415.0 -9.5Q5377 12 5327 12ZM5323 -43Q5371 -43 5405.5 -62.5Q5440 -82 5458.0 -120.0Q5476 -158 5476 -214V-242H5335Q5263 -242 5231.5 -215.5Q5200 -189 5200 -141Q5200 -95 5232.5 -69.0Q5265 -43 5323 -43Z"/><g class="logo-puente" fill="#B07E4A"><path class="logo-linea" d="M46.9 44.99L295 67.31" fill="none" stroke="#B07E4A" stroke-width="1.3" stroke-linecap="round"/><path class="arco arco-1" d="M46.99 79.45V70.21A25.62 15.55 0 0 1 72.61 54.65L72.61 55.83A14.83 22.79 0 0 0 57.78 78.62V77.94Z"/><path class="arco arco-2" d="M93.7 89.2V78.57A25.98 17.29 0 0 1 119.69 61.29L119.69 62.5A14.37 23.3 0 0 0 105.32 85.81V88.02Z"/><path class="arco arco-3" d="M143.81 109.83V89.64A27.65 22.15 0 0 1 171.45 67.49L171.45 68.82A16.65 22.13 0 0 0 154.8 90.95V108.53Z"/><path class="arco arco-4" d="M199.78 139.02V97.09A29.6 22.39 0 0 1 229.38 74.7L229.38 76.01A17.84 24.82 0 0 0 211.54 100.83V137.34Z"/><path class="arco arco-5" d="M264.32 109.83V102.56A28.43 20.83 0 0 1 292.75 81.73L292.75 83.02A17.86 23.64 0 0 0 274.9 106.66V108.69Z"/></g></svg>
+      <p class="pie__lema">Todos los caminos llevan a Roma</p>
+    </div>
+    <div class="pie__cols">
+      <div>
+        <h2 class="pie__tit">El albergue</h2>
+        <p>Albergue privado en Pola de Lena, abierto en 2023. Para peregrinos del Camino del Salvador y para quien viene a Lena.</p>
+        <p>C/ Canuto Hevia, 12<br>33630 La Pola (Lena), Asturias</p>
+      </div>
+      <div>
+        <h2 class="pie__tit">Reservar</h2>
+        <p><a href="tel:+34677856645" class="num">677 856 645</a><br><a href="mailto:albergueroma@gmail.com">albergueroma@gmail.com</a><br>Registro de 13:00 a 21:00 · sin hora de cierre</p>
+        <a class="btn btn--ocre" href="#reservar" data-reservar>Ver camas libres</a>
+      </div>
+      <div>
+        <h2 class="pie__tit">Por aquí</h2>
+        <p><a href="#habitaciones">Habitaciones</a><br><a href="#hay">Lo que hay</a><br><a href="#bajada">La bajada de Pajares</a><br><a href="#lena">Lena alrededor</a><br><a href="#llegar">Cómo llegar</a></p>
+      </div>
+    </div>
+    <div class="pie__creditos">
+      <p><b>Fotos de Lena:</b> Mongolo1984, en Wikimedia Commons, con licencia <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" rel="noopener" target="_blank">CC BY-SA 4.0</a> (el enlace al original va con cada foto). <b>Fotos del albergue:</b> las de su ficha en Booking. <b>Lugares y caminos:</b> © colaboradores de <a href="https://www.openstreetmap.org/copyright" rel="noopener" target="_blank">OpenStreetMap</a> (ODbL). <b>Relieve del perfil de la bajada:</b> MDT05 © <a href="https://www.ign.es" rel="noopener" target="_blank">Instituto Geográfico Nacional</a> (CC BY 4.0). <b>Etapas y distancias:</b> Gronze.</p>
+    </div>
+    <div class="pie__legal">
+      <nav aria-label="Legal"><a href="aviso-legal.html">Aviso legal</a><a href="privacidad.html">Privacidad</a><a href="cookies.html">Cookies</a><a href="accesibilidad.html">Accesibilidad</a><button type="button" id="abrir-cookies">Preferencias de cookies</button></nav>
+      <p>© <span id="anno">2026</span> Albergue Roma · Pola de Lena</p>
+    </div>
+  </div>
+</footer>
+
+<div class="cookies" id="cookies" role="region" aria-label="Aviso de cookies" hidden>
+  <p>Esta web no usa cookies de análisis ni de publicidad. Guarda en tu navegador que has visto este aviso; las letras vienen de Google Fonts y el mapa de Google solo se carga si lo pides. <a href="cookies.html">Más información</a></p>
+  <div class="cookies__acc">
+    <button class="btn btn--castano" type="button" id="ck-si">Entendido</button>
+    <button class="btn btn--hueco" type="button" id="ck-no">Solo lo necesario</button>
+  </div>
+</div>
+
+<!-- MANDO DE MAQUETA (no viaja al cliente): solo con ?revision -->
+<div class="mando" id="mando" role="group" aria-label="Dos versiones de la misma web" hidden>
+  <span class="mando__eti">Versión</span>
+  <button type="button" data-densidad="caminos" aria-pressed="true">Caminos</button>
+  <button type="button" data-densidad="sobria" aria-pressed="false">Sobria</button>
+</div>
+<!-- fin del MANDO DE MAQUETA -->
+<!-- visor de fotos: se abre por el NOMBRE de la foto (data-visor), nunca por su posición -->
+<dialog class="visor" id="visor" aria-label="Foto ampliada">
+  <figure class="visor__fig">
+    <img id="visor-img" alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" width="1280" height="960">
+    <figcaption><span id="visor-pie"></span> <span class="visor__n num" id="visor-n"></span></figcaption>
+  </figure>
+  <button type="button" class="visor__btn visor__btn--ant" id="visor-ant" aria-label="Foto anterior">‹</button>
+  <button type="button" class="visor__btn visor__btn--sig" id="visor-sig" aria-label="Foto siguiente">›</button>
+  <button type="button" class="visor__btn visor__btn--cerrar" id="visor-cerrar" aria-label="Cerrar">×</button>
+</dialog>
+<!-- librerías (jsDelivr, con versión fija): Lenis suaviza el scroll; GSAP y ScrollTrigger los usan los módulos -->
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<!-- las habitaciones, en un solo sitio (las leen Puertas y el simulador) -->
+<script src="js/datos-habitaciones.js?v=09fdbf99" defer></script>
+<!-- los módulos (cada uno en su archivo; si falta alguno, se queda el respaldo del HTML) -->
+<script src="js/cortina.js?v=2e173ab0" defer></script>
+<script src="js/cruz.js?v=462d7629" defer></script>
+<script src="js/puertas.js?v=5003ee8a" defer></script>
+<script src="js/bajada.js?v=d3e4decd" defer></script>
+<!-- la web -->
+<script src="js/reserva.js?v=6ec5f4cd" defer></script>
+<script src="js/main.js?v=1f84e7d0" defer></script>
+</body>
+</html>

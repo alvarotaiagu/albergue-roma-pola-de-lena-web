@@ -1,0 +1,10 @@
+<!-- visor de fotos: se abre por el NOMBRE de la foto (data-visor), nunca por su posición -->
+<dialog class="visor" id="visor" aria-label="Foto ampliada">
+  <figure class="visor__fig">
+    <img id="visor-img" alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" width="1280" height="960">
+    <figcaption><span id="visor-pie"></span> <span class="visor__n num" id="visor-n"></span></figcaption>
+  </figure>
+  <button type="button" class="visor__btn visor__btn--ant" id="visor-ant" aria-label="Foto anterior">‹</button>
+  <button type="button" class="visor__btn visor__btn--sig" id="visor-sig" aria-label="Foto siguiente">›</button>
+  <button type="button" class="visor__btn visor__btn--cerrar" id="visor-cerrar" aria-label="Cerrar">×</button>
+</dialog>

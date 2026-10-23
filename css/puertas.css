@@ -1,0 +1,185 @@
+/* Albergue Roma · módulo Puertas · «Cada puerta, un pueblo de Lena»
+   Todo cuelga de [data-modulo="puertas"]. Tokens de :root de estilos.css con var(--x, valor).
+   El JS (js/puertas.js) pone en cada puerta la variable --ap (0 cerrada … 1 abierta) y --par (paralaje);
+   aquí solo se leen. Tres disposiciones: data-modo="pasillo" | "columna" | "rejilla" (+ .quieto). */
+
+[data-modulo="puertas"] {
+  --pu-h: clamp(280px, 50svh, 470px);
+  --pu-w: calc(var(--pu-h) * .52);
+  --pu-pared: var(--cal-2, #E8E0D3);
+  --pu-ink: #14110e;
+  position: relative;
+}
+[data-modulo="puertas"] .pu { position: relative; overflow-x: clip; color: var(--tinta, #1A1612); font-family: var(--f-txt, system-ui, sans-serif); }
+[data-modulo="puertas"] .pu__defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+[data-modulo="puertas"] .pu__sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+/* ---------- el pasillo (escritorio, con movimiento) ---------- */
+[data-modulo="puertas"] .pu__pin {
+  position: relative; box-sizing: border-box; height: 100svh;
+  padding: var(--cab, 72px) 0 calc(14svh + 6px);
+  display: flex; align-items: flex-end; overflow: clip;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, .38), rgba(255, 255, 255, 0) 38%),
+    var(--pu-pared);
+}
+[data-modulo="puertas"] .pu__pin::after {            /* el suelo y el rodapié */
+  content: ""; position: absolute; inset: auto 0 0 0; height: 14svh; pointer-events: none;
+  border-top: 10px solid #c9b99d;
+  background: repeating-linear-gradient(90deg, rgba(0, 0, 0, .10) 0 2px, transparent 2px 120px), linear-gradient(180deg, #6f523d, #4a3426);
+  box-shadow: inset 0 14px 18px -10px rgba(0, 0, 0, .45);
+}
+[data-modulo="puertas"] .pu__pasillo { position: relative; z-index: 1; display: flex; align-items: flex-end; width: max-content; will-change: transform; }
+[data-modulo="puertas"] .pu__puerta {
+  flex: none; display: flex; align-items: flex-end;
+  gap: clamp(20px, 3.5vw, 56px); padding: 0 clamp(24px, 5vw, 90px);
+}
+[data-modulo="puertas"] .pu__escena { display: flex; flex-direction: column; align-items: center; }
+
+/* ---------- el cartel: marco de madera gris, papel claro, nombre a pluma, cruz y ALBERGUE ROMA ---------- */
+[data-modulo="puertas"] .pu__cartel {
+  width: calc(var(--pu-w) * 1.34); box-sizing: border-box; padding: 5.5%;
+  margin-bottom: clamp(16px, 3.4svh, 34px);
+  background:
+    repeating-linear-gradient(92deg, rgba(55, 46, 36, 0) 0 2px, rgba(55, 46, 36, .17) 2px 3px, rgba(255, 255, 255, .09) 3px 5px, rgba(55, 46, 36, 0) 5px 8px),
+    linear-gradient(180deg, #a09886, #7d7666);
+  box-shadow: 0 10px 16px -9px rgba(26, 22, 18, .55), inset 0 0 0 1px rgba(255, 255, 255, .2), inset 0 -2px 0 rgba(0, 0, 0, .22);
+}
+[data-modulo="puertas"] .pu__papel {
+  display: flex; flex-direction: column; align-items: center; gap: .5em;
+  padding: 7% 5% 6%; background: var(--blanco, #FBF8F3);
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, .22), inset 0 0 0 1px rgba(0, 0, 0, .08);
+}
+[data-modulo="puertas"] .pu__nombre { display: block; width: 100%; height: calc(var(--pu-w) * .27); overflow: visible; }
+[data-modulo="puertas"] .pu__tinta { fill: var(--pu-ink); }
+[data-modulo="puertas"] .pu__rotulo { font: 400 2rem var(--f-cartel, 'Brush Script MT', cursive); }
+[data-modulo="puertas"] .pu__marca {
+  display: flex; align-items: center; justify-content: center; gap: .55em;
+  font: 700 max(8px, calc(var(--pu-w) * .05)) var(--f-tit, system-ui, sans-serif); letter-spacing: .13em; color: var(--tinta-2, #5A4E44);
+}
+[data-modulo="puertas"] .pu__cruz { height: 1.9em; width: auto; color: var(--castano, #683C10); flex: none; }
+
+/* ---------- la puerta: hoja blanca con paneles, que gira sobre su bisagra ---------- */
+[data-modulo="puertas"] .pu__vano {
+  position: relative; width: var(--pu-w); height: var(--pu-h); flex: none;
+  perspective: 900px; perspective-origin: 0% 50%;
+  box-shadow: 0 0 0 7px var(--blanco, #FBF8F3), 0 0 0 8px rgba(26, 22, 18, .16), 0 0 0 9px rgba(255, 255, 255, .5);
+}
+[data-modulo="puertas"] .pu__vano:has(.pu__hoja:focus-visible) { outline: 3px solid var(--foco, #745434); outline-offset: 14px; }
+[data-modulo="puertas"] .pu__cuarto { position: absolute; inset: 0; overflow: hidden; background: var(--noche-2, #241B15); }
+[data-modulo="puertas"] .pu__foto { position: absolute; inset: -3% -14%; display: block; transform: translate3d(calc(var(--par, 0) * 1px), 0, 0) scale(calc(1 + var(--ap, 0) * .04)); }
+[data-modulo="puertas"] .pu__foto img {
+  display: block; width: 100%; height: 100%; object-fit: cover; object-position: var(--fx, 50%) var(--fy, 50%);
+  filter: brightness(calc(.3 + var(--ap, 0) * .7)) saturate(.96);
+}
+[data-modulo="puertas"] .pu__luz {                    /* la luz cálida que sale al abrir */
+  position: absolute; inset: 0; opacity: calc(var(--ap, 0) * .95); mix-blend-mode: screen; pointer-events: none;
+  background: radial-gradient(120% 90% at 18% 58%, rgba(255, 214, 150, .5), rgba(255, 186, 104, .14) 55%, transparent 80%);
+}
+[data-modulo="puertas"] .pu__sombra {                 /* la sombra de la hoja, que se mueve con ella */
+  position: absolute; inset: 0 auto 0 0; width: 62%; pointer-events: none; transform-origin: 0 50%;
+  transform: scaleX(calc(.15 + var(--ap, 0) * .85)); opacity: calc(var(--ap, 0) * .92);
+  background: linear-gradient(90deg, rgba(10, 6, 3, .72), rgba(10, 6, 3, .28) 55%, rgba(10, 6, 3, 0));
+}
+[data-modulo="puertas"] .pu__suelo-luz {              /* el charco de luz en el suelo del pasillo */
+  position: absolute; top: 100%; left: -6%; width: 150%; height: calc(var(--pu-h) * .2); pointer-events: none;
+  opacity: calc(var(--ap, 0) * .85); filter: blur(5px);
+  clip-path: polygon(0 0, 66% 0, 100% 100%, 0 100%);
+  background: linear-gradient(180deg, rgba(255, 206, 130, .55), rgba(255, 206, 130, 0));
+}
+[data-modulo="puertas"] .pu__hoja {
+  position: absolute; inset: 0; margin: 0; padding: 0; border: 0; cursor: pointer; display: block;
+  transform-origin: 0 50%; transform: rotateY(calc(var(--ap, 0) * 74deg)); backface-visibility: hidden;
+  background: linear-gradient(90deg, #ece6da, var(--blanco, #FBF8F3) 12%, var(--blanco, #FBF8F3) 88%, #e9e2d5);
+  box-shadow: inset 0 0 0 1px rgba(26, 22, 18, .1), 6px 0 18px rgba(0, 0, 0, calc(var(--ap, 0) * .34));
+  -webkit-tap-highlight-color: transparent; font: inherit; color: inherit;
+}
+[data-modulo="puertas"] .pu__hoja:focus-visible { outline: none; }
+[data-modulo="puertas"] .pu__panel { position: absolute; inset: 7% 13% 8%; pointer-events: none; }
+[data-modulo="puertas"] .pu__panel::before, [data-modulo="puertas"] .pu__panel::after {
+  content: ""; position: absolute; left: 0; right: 0; border-radius: 2px;
+  box-shadow: inset 0 0 0 1px rgba(26, 22, 18, .13), inset 2px 3px 6px rgba(26, 22, 18, .09), 0 1px 0 rgba(255, 255, 255, .9);
+}
+[data-modulo="puertas"] .pu__panel::before { top: 0; height: 44%; }
+[data-modulo="puertas"] .pu__panel::after { bottom: 0; height: 49%; }
+[data-modulo="puertas"] .pu__pomo {
+  position: absolute; right: 9%; top: 52%; width: 9%; aspect-ratio: 1; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(circle at 35% 30%, #e7c89c, var(--ocre, #B07E4A) 55%, #6d4a25); box-shadow: 0 2px 4px rgba(0, 0, 0, .35);
+}
+[data-modulo="puertas"] .pu__llave {                   /* la etiqueta azul de la llave: la única chispa de las taquillas */
+  position: absolute; right: 11.5%; top: calc(52% + 9.5%); width: 5%; aspect-ratio: .6; border-radius: 1px 1px 3px 3px; pointer-events: none;
+  background: var(--taquilla, #2450A0); box-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+}
+
+/* ---------- la ficha ---------- */
+[data-modulo="puertas"] .pu__ficha {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px; align-items: start;
+  width: clamp(300px, 29vw, 400px); margin-bottom: 4px; box-sizing: border-box;
+  opacity: var(--ap, 0); transform: translate3d(calc((1 - var(--ap, 0)) * -24px), 0, 0);
+}
+[data-modulo="puertas"] .pu__puerta:not([data-ver]) .pu__ficha { visibility: hidden; }
+[data-modulo="puertas"] .pu__h { margin: 0 0 .15em; font: 700 clamp(1.35rem, 2vw, 1.75rem)/1.1 var(--f-tit, system-ui, sans-serif); color: var(--tinta, #1A1612); }
+[data-modulo="puertas"] .pu__tipo { margin: 0 0 .7em; color: var(--tinta-2, #5A4E44); font-size: .95rem; }
+[data-modulo="puertas"] .pu__datos { display: flex; flex-wrap: wrap; gap: .35em .55em; margin: 0 0 .8em; padding: 0; font-size: .92rem; font-weight: 600; }
+[data-modulo="puertas"] .pu__datos span { padding: .2em .65em; border-radius: 99px; background: var(--blanco, #FBF8F3); box-shadow: inset 0 0 0 1px rgba(26, 22, 18, .14); }
+[data-modulo="puertas"] .pu__tiene { margin: 0 0 .8em; padding: 0; list-style: none; font-size: .92rem; color: var(--tinta, #1A1612); }
+[data-modulo="puertas"] .pu__tiene li { padding-left: 1.1em; position: relative; line-height: 1.45; }
+[data-modulo="puertas"] .pu__tiene li::before { content: ""; position: absolute; left: .1em; top: .62em; width: .4em; height: .4em; background: var(--ocre, #B07E4A); transform: rotate(45deg); }
+[data-modulo="puertas"] .pu__donde { margin: 0 0 1em; font-size: .92rem; color: var(--tinta-2, #5A4E44); }
+[data-modulo="puertas"] .pu__reservar {
+  display: inline-block; padding: .7em 1.3em; border-radius: 99px; text-decoration: none; cursor: pointer;
+  font: 600 .95rem var(--f-txt, system-ui, sans-serif); background: var(--castano, #683C10); color: var(--blanco, #FBF8F3);
+  transition: background-color .2s;
+}
+[data-modulo="puertas"] .pu__reservar:hover { background: var(--castano-2, #7A4518); }
+[data-modulo="puertas"] .pu__reservar:focus-visible { outline: 3px solid var(--foco, #745434); outline-offset: 3px; }
+[data-modulo="puertas"] .pu__real { margin: .8em 0 0; font-size: .75rem; letter-spacing: .02em; color: var(--tinta-2, #5A4E44); }
+
+/* ---------- el minimapa de Lena ---------- */
+[data-modulo="puertas"] .pu__mapa { width: 92px; height: auto; aspect-ratio: 358.5 / 1000; overflow: visible; }
+[data-modulo="puertas"] .pu__mapa-fondo { fill: color-mix(in srgb, var(--blanco, #FBF8F3) 70%, var(--pu-pared)); }
+[data-modulo="puertas"] .pu__rio { fill: none; stroke: color-mix(in srgb, var(--taquilla, #2450A0) 34%, var(--pu-pared)); stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; }
+[data-modulo="puertas"] .pu__rio-nombre { font: italic 600 28px var(--f-txt, sans-serif); fill: color-mix(in srgb, var(--taquilla, #2450A0) 55%, var(--tinta-2, #5A4E44)); }
+[data-modulo="puertas"] .pu__camino-puerto { fill: none; stroke: var(--ocre, #B07E4A); stroke-width: 6; stroke-dasharray: 3 14; stroke-linecap: round; opacity: .6; }
+[data-modulo="puertas"] .pu__camino { fill: none; stroke: var(--ocre, #B07E4A); stroke-width: 9; stroke-linecap: round; stroke-linejoin: round; }
+[data-modulo="puertas"] .pu__pueblo { fill: var(--castano, #683C10); opacity: .5; }
+[data-modulo="puertas"] .pu__pola { fill: var(--castano, #683C10); }
+[data-modulo="puertas"] .pu__pola-nombre { font: 700 34px var(--f-tit, sans-serif); fill: var(--tinta-2, #5A4E44); }
+[data-modulo="puertas"] .pu__sol { fill: rgba(255, 196, 104, .5); }
+[data-modulo="puertas"] .pu__punto { fill: var(--castano, #683C10); stroke: var(--blanco, #FBF8F3); stroke-width: 6; }
+[data-modulo="puertas"] .pu__mapa-txt { font: 700 40px var(--f-tit, sans-serif); fill: var(--tinta, #1A1612); paint-order: stroke; stroke: var(--blanco, #FBF8F3); stroke-width: 12; stroke-linejoin: round; }
+
+/* ---------- columna (móvil) y rejilla (quieto o sobria): sin pasillo ni fijado ---------- */
+[data-modulo="puertas"] .pu[data-modo="columna"],
+[data-modulo="puertas"] .pu[data-modo="rejilla"] { --pu-w: min(62vw, 220px); --pu-h: calc(var(--pu-w) / .52); }
+[data-modulo="puertas"] .pu[data-modo="columna"] .pu__pin,
+[data-modulo="puertas"] .pu[data-modo="rejilla"] .pu__pin {
+  height: auto; display: block; overflow: visible; padding: clamp(28px, 5vw, 56px) var(--lado, 20px); background: none;
+  max-width: var(--ancho, 1240px); margin-inline: auto; box-sizing: border-box;
+}
+[data-modulo="puertas"] .pu[data-modo="columna"] .pu__pin::after,
+[data-modulo="puertas"] .pu[data-modo="rejilla"] .pu__pin::after { display: none; }
+[data-modulo="puertas"] .pu[data-modo="columna"] .pu__pasillo,
+[data-modulo="puertas"] .pu[data-modo="rejilla"] .pu__pasillo { display: grid; width: auto; gap: clamp(44px, 7vw, 72px) clamp(24px, 3vw, 48px); grid-template-columns: minmax(0, 1fr); }
+[data-modulo="puertas"] .pu[data-modo="rejilla"] .pu__pasillo { grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
+[data-modulo="puertas"] .pu[data-modo="columna"] .pu__puerta,
+[data-modulo="puertas"] .pu[data-modo="rejilla"] .pu__puerta {
+  flex-direction: column; align-items: center; gap: 28px; padding: 0; min-width: 0;
+  padding-bottom: 22px; background: linear-gradient(180deg, transparent 60%, color-mix(in srgb, var(--pu-pared) 70%, transparent));
+}
+[data-modulo="puertas"] .pu[data-modo="columna"] .pu__cartel,
+[data-modulo="puertas"] .pu[data-modo="rejilla"] .pu__cartel { margin-bottom: 22px; }
+[data-modulo="puertas"] .pu[data-modo="columna"] .pu__ficha,
+[data-modulo="puertas"] .pu[data-modo="rejilla"] .pu__ficha { width: min(100%, 360px); transform: translate3d(0, calc((1 - var(--ap, 0)) * 18px), 0); }
+[data-modulo="puertas"] .pu.quieto .pu__ficha { transform: none; }
+[data-modulo="puertas"] .pu[data-modo="columna"] .pu__suelo-luz,
+[data-modulo="puertas"] .pu[data-modo="rejilla"] .pu__suelo-luz { display: none; }
+
+@media (max-width: 380px) {
+  [data-modulo="puertas"] .pu__mapa { width: 76px; }
+  [data-modulo="puertas"] .pu__ficha { gap: 12px; }
+}
+/* sin :has() el foco igualmente se ve (anillo en la hoja) */
+@supports not selector(:has(*)) {
+  [data-modulo="puertas"] .pu__hoja:focus-visible { outline: 3px solid var(--foco, #745434); outline-offset: 6px; }
+}

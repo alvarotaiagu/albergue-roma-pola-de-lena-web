@@ -1,0 +1,13 @@
+{
+  "name": "Albergue Roma · Pola de Lena",
+  "short_name": "Albergue Roma",
+  "lang": "es",
+  "start_url": "./",
+  "display": "browser",
+  "background_color": "#F3EEE6",
+  "theme_color": "#16110D",
+  "icons": [
+    { "src": "marca/icono-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "marca/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

@@ -1,0 +1,49 @@
+<!-- ============ pie: los cinco arcos que se fueron dibujando por la página se juntan bajo la línea
+     y forman el puente del logo entero (el objeto que se completa en el pie) ============ -->
+<footer class="pie" id="pie" data-tono="oscuro">
+  <div class="env">
+    <div class="pie__puente" id="pie-puente">
+      <!--svg:marca/logo.svg|clase=pie__logo|id=pie-logo-->
+      <p class="pie__lema">Todos los caminos llevan a Roma</p>
+    </div>
+    <div class="pie__cols">
+      <div>
+        <h2 class="pie__tit">El albergue</h2>
+        <p>Albergue privado en Pola de Lena, abierto en 2023. Para peregrinos del Camino del Salvador y para quien viene a Lena.</p>
+        <p>C/ Canuto Hevia, 12<br>33630 La Pola (Lena), Asturias</p>
+      </div>
+      <div>
+        <h2 class="pie__tit">Reservar</h2>
+        <p><a href="tel:+34677856645" class="num">677 856 645</a><br><a href="mailto:albergueroma@gmail.com">albergueroma@gmail.com</a><br>Registro de 13:00 a 21:00 · sin hora de cierre</p>
+        <a class="btn btn--ocre" href="#reservar" data-reservar>Ver camas libres</a>
+      </div>
+      <div>
+        <h2 class="pie__tit">Por aquí</h2>
+        <p><a href="#habitaciones">Habitaciones</a><br><a href="#hay">Lo que hay</a><br><a href="#bajada">La bajada de Pajares</a><br><a href="#lena">Lena alrededor</a><br><a href="#llegar">Cómo llegar</a></p>
+      </div>
+    </div>
+    <div class="pie__creditos">
+      <p><b>Fotos de Lena:</b> Mongolo1984, en Wikimedia Commons, con licencia <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" rel="noopener" target="_blank">CC BY-SA 4.0</a> (el enlace al original va con cada foto). <b>Fotos del albergue:</b> las de su ficha en Booking. <b>Lugares y caminos:</b> © colaboradores de <a href="https://www.openstreetmap.org/copyright" rel="noopener" target="_blank">OpenStreetMap</a> (ODbL). <b>Relieve del perfil de la bajada:</b> MDT05 © <a href="https://www.ign.es" rel="noopener" target="_blank">Instituto Geográfico Nacional</a> (CC BY 4.0). <b>Etapas y distancias:</b> Gronze.</p>
+    </div>
+    <div class="pie__legal">
+      <nav aria-label="Legal"><a href="aviso-legal.html">Aviso legal</a><a href="privacidad.html">Privacidad</a><a href="cookies.html">Cookies</a><a href="accesibilidad.html">Accesibilidad</a><button type="button" id="abrir-cookies">Preferencias de cookies</button></nav>
+      <p>© <span id="anno">2026</span> Albergue Roma · Pola de Lena</p>
+    </div>
+  </div>
+</footer>
+
+<div class="cookies" id="cookies" role="region" aria-label="Aviso de cookies" hidden>
+  <p>Esta web no usa cookies de análisis ni de publicidad. Guarda en tu navegador que has visto este aviso; las letras vienen de Google Fonts y el mapa de Google solo se carga si lo pides. <a href="cookies.html">Más información</a></p>
+  <div class="cookies__acc">
+    <button class="btn btn--castano" type="button" id="ck-si">Entendido</button>
+    <button class="btn btn--hueco" type="button" id="ck-no">Solo lo necesario</button>
+  </div>
+</div>
+
+<!-- MANDO DE MAQUETA (no viaja al cliente): solo con ?revision -->
+<div class="mando" id="mando" role="group" aria-label="Dos versiones de la misma web" hidden>
+  <span class="mando__eti">Versión</span>
+  <button type="button" data-densidad="caminos" aria-pressed="true">Caminos</button>
+  <button type="button" data-densidad="sobria" aria-pressed="false">Sobria</button>
+</div>
+<!-- fin del MANDO DE MAQUETA -->

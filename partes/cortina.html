@@ -1,0 +1,76 @@
+<!-- ============ cortina «La celosía» (agente Cruz) ============
+     Los cinco puntos del símbolo, la cruz que se dibuja rombo a rombo desde el centro, la celosía
+     que se multiplica, la luz cálida por los huecos y la celosía que se abre desde el centro; la cruz
+     central vuela a su sitio en la portada. Piezas: partes/cortina.html + css/cortina.css + js/cortina.js.
+     Se retira SIEMPRE: sin JS no llega a pintarse (la clase la pone este script), con movimiento
+     reducido ni un fotograma, y si js/cortina.js no está cuando el HTML ya se ha leído, se va al momento.
+     ?sin-cortina la quita (pruebas y revisión). -->
+<script>
+(function (d, w) {
+  var h = d.documentElement, q = '';
+  try { q = w.location.search; } catch (e) {}
+  var reducido = false;
+  try { reducido = w.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+  if (reducido || /[?&]sin-cortina(=|&|$)/.test(q)) { h.classList.add('cortina-fuera'); return; }
+  h.classList.add('cortina-activa');
+  function fuera() {
+    h.classList.remove('cortina-activa'); h.classList.add('cortina-fuera');
+    var c = d.getElementById('cortina'); if (c) c.hidden = true;
+  }
+  // red de seguridad propia (la web pone otra en la cabeza): a los 6,5 s fuera, pase lo que pase
+  w.__romaRedCortina = setTimeout(fuera, 6500);
+  // los defer ya han corrido al llegar aquí: si js/cortina.js no está, la celosía se va ya
+  d.addEventListener('DOMContentLoaded', function () {
+    if (!(w.Roma && w.Roma.cortina)) { clearTimeout(w.__romaRedCortina); fuera(); }
+  });
+})(document, window);
+</script>
+<div class="cortina" id="cortina" aria-hidden="true">
+  <svg class="cortina__defs" width="0" height="0" focusable="false" aria-hidden="true">
+    <defs>
+      <!-- la geometría de marca/cruz.svg, con el centro en 0,0 (la punta de cada pétalo a 19,3) -->
+      <path id="cortina-petalo" d="M-4.05 -6V-14.9C-4.05 -17.2 -1.6 -19.05 0 -19.3C1.6 -19.05 4.05 -17.2 4.05 -14.9V-6Z"/>
+      <path id="cortina-rombo" d="M0 -4.75L3.99 -0.76Q4.75 0 3.99 0.76L0 4.75L-3.99 0.76Q-4.75 0 -3.99 -0.76Z"/>
+      <g id="cortina-x">
+        <use href="#cortina-petalo"/>
+        <use href="#cortina-petalo" transform="rotate(90)"/>
+        <use href="#cortina-petalo" transform="rotate(180)"/>
+        <use href="#cortina-petalo" transform="rotate(270)"/>
+        <use href="#cortina-rombo" x="-13.21" y="-16.44"/>
+        <use href="#cortina-rombo" x="14.13" y="-16.44"/>
+        <use href="#cortina-rombo" x="-13.21" y="16.56"/>
+        <use href="#cortina-rombo" x="14.13" y="16.56"/>
+        <circle class="cortina__x-centro" r="3.85"/>
+      </g>
+    </defs>
+  </svg>
+  <!-- el muro (castaño casi negro) y la luz cálida que pasa por los huecos; el hueco se abre desde el centro -->
+  <div class="cortina__muro"><div class="cortina__luz"></div></div>
+  <!-- la retícula de cruces y puntos (la monta js/cortina.js a la medida de la pantalla) -->
+  <div class="cortina__celosia"></div>
+  <!-- la cruz central: se dibuja, se rellena y vuela a la portada -->
+  <div class="cortina__cruz">
+    <svg viewBox="-22 -22 44 44" focusable="false" aria-hidden="true">
+      <g class="cortina__halo"><circle r="9"/></g>
+      <g class="cortina__rellenos">
+        <use href="#cortina-petalo"/>
+        <use href="#cortina-petalo" transform="rotate(90)"/>
+        <use href="#cortina-petalo" transform="rotate(180)"/>
+        <use href="#cortina-petalo" transform="rotate(270)"/>
+      </g>
+      <g class="cortina__trazos">
+        <g><path pathLength="1" d="M0 -6H-4.05V-14.9C-4.05 -17.2 -1.6 -19.05 0 -19.3"/><path pathLength="1" d="M0 -6H4.05V-14.9C4.05 -17.2 1.6 -19.05 0 -19.3"/></g>
+        <g transform="rotate(90)"><path pathLength="1" d="M0 -6H-4.05V-14.9C-4.05 -17.2 -1.6 -19.05 0 -19.3"/><path pathLength="1" d="M0 -6H4.05V-14.9C4.05 -17.2 1.6 -19.05 0 -19.3"/></g>
+        <g transform="rotate(180)"><path pathLength="1" d="M0 -6H-4.05V-14.9C-4.05 -17.2 -1.6 -19.05 0 -19.3"/><path pathLength="1" d="M0 -6H4.05V-14.9C4.05 -17.2 1.6 -19.05 0 -19.3"/></g>
+        <g transform="rotate(270)"><path pathLength="1" d="M0 -6H-4.05V-14.9C-4.05 -17.2 -1.6 -19.05 0 -19.3"/><path pathLength="1" d="M0 -6H4.05V-14.9C4.05 -17.2 1.6 -19.05 0 -19.3"/></g>
+      </g>
+      <g class="cortina__puntos">
+        <g transform="translate(-13.21 -16.44)"><use href="#cortina-rombo"/></g>
+        <g transform="translate(14.13 -16.44)"><use href="#cortina-rombo"/></g>
+        <g transform="translate(14.13 16.56)"><use href="#cortina-rombo"/></g>
+        <g transform="translate(-13.21 16.56)"><use href="#cortina-rombo"/></g>
+        <circle class="cortina__centro" r="3.85"/>
+      </g>
+    </svg>
+  </div>
+</div>

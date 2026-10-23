@@ -1,0 +1,66 @@
+/* ------------------------------------------------------------------
+   Albergue Roma · portada: dónde va la cruz (agente Cruz)
+   Lo usan js/cruz.js (mide .cruz__sitio y lee --cruz-linea) y el respaldo
+   en SVG (.portada__cruz, de marca/cruz.svg, viewBox 40×44, centro en 20,22).
+   --cruz-x / --cruz-y  centro de la cruz, como fracción del lienzo (0 a 1)
+   --cruz-r             distancia del centro a la punta de un pétalo
+   --cruz-linea         x1 y1 x2 y2 (fracciones del lienzo): la línea por la que
+                        caen los puntos al salir con el scroll; ahí empieza el hilo.
+   Todo bajo [data-modulo="cruz"].
+   ------------------------------------------------------------------ */
+[data-modulo="cruz"] {
+  --cruz-x: .7;
+  --cruz-y: .5;
+  --cruz-r: min(34svh, 19vw);
+  --cruz-linea: .36 .8 .97 1;
+}
+/* móvil y pantallas apaisadas al revés (más altas que anchas): la cruz va arriba, detrás del texto, más tenue */
+@media (max-width: 899px), (max-aspect-ratio: 1/1) {
+  [data-modulo="cruz"] {
+    --cruz-x: .5;
+    --cruz-y: .3;
+    --cruz-r: min(27svh, 38vw);
+    --cruz-linea: .5 .45 .965 1;
+  }
+}
+
+/* la sonda: una caja invisible que mide la cruz (centro y radio) */
+[data-modulo="cruz"] .cruz__sitio {
+  position: absolute; display: block; pointer-events: none; visibility: hidden;
+  left: calc(var(--cruz-x) * 100% - var(--cruz-r));
+  top: calc(var(--cruz-y) * 100% - var(--cruz-r));
+  width: calc(var(--cruz-r) * 2);
+  height: calc(var(--cruz-r) * 2);
+}
+
+/* el lienzo de WebGL: cubre el lienzo de la portada, por encima de la foto y por debajo del texto */
+[data-modulo="cruz"] .cruz__lienzo {
+  position: absolute; inset: 0; z-index: 1;
+  width: 100%; height: 100%; display: block;
+  pointer-events: none;
+  animation: cruz-aparece .5s ease-out both;
+}
+@keyframes cruz-aparece { from { opacity: 0; } to { opacity: 1; } }
+@media (max-width: 899px), (max-aspect-ratio: 1/1) {
+  [data-modulo="cruz"] .cruz__lienzo { opacity: .6; animation: none; }
+}
+
+/* el respaldo: la cruz en SVG, quieta, con su centro en (--cruz-x, --cruz-y) */
+[data-modulo="cruz"] .portada__cruz {
+  position: absolute; z-index: 1; display: block; pointer-events: none;
+  width: calc(var(--cruz-r) * 2.0725);   /* 40 / 19,3 */
+  height: calc(var(--cruz-r) * 2.2798);  /* 44 / 19,3 */
+  left: calc(var(--cruz-x) * 100% - var(--cruz-r) * 1.03625);
+  top: calc(var(--cruz-y) * 100% - var(--cruz-r) * 1.1399);
+  overflow: visible;
+}
+@media (max-width: 899px), (max-aspect-ratio: 1/1) {
+  [data-modulo="cruz"] .portada__cruz { opacity: .55; }
+}
+/* con el lienzo vivo, el respaldo se va (también el nombre antiguo, por si acaso) */
+[data-modulo="cruz"].cruz--viva .portada__cruz,
+[data-modulo="cruz"].cruz--viva .cruz-respaldo { opacity: 0; visibility: hidden; }
+
+@media (prefers-reduced-motion: reduce) {
+  [data-modulo="cruz"] .cruz__lienzo { animation: none; }
+}

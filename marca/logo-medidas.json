@@ -1,0 +1,148 @@
+{
+ "fuente": "ref/logo/logo-web-300.png (300x140), medido con scripts/logo.py",
+ "colores": {
+  "ocre": "#B07E4A",
+  "castano": "#683C10",
+  "letras": "#000 en el PNG; #1A1612 en el SVG"
+ },
+ "cruz": {
+  "centro": [
+   21.1,
+   27.86
+  ],
+  "petalo": {
+   "ancho": 8.1,
+   "interior": 6.0,
+   "fin_recto": 14.9,
+   "punta": 19.3
+  },
+  "punto_central_r": 3.85,
+  "rombos": {
+   "dx": 13.67,
+   "dy": 16.5,
+   "cx": 21.56,
+   "cy": 27.92,
+   "r": 4.75
+  },
+  "nota": "en marca/cruz.svg el centro está en (20, 22); viewBox 0 0 40 44"
+ },
+ "letras": {
+  "trazo": 3.9,
+  "linea_alta": 9.1,
+  "linea_baja": 29.8,
+  "puntos_ocres": [
+   [
+    56.3,
+    24.35,
+    2.5
+   ],
+   [
+    115.6,
+    19.0,
+    2.55
+   ],
+   [
+    152.1,
+    20.45,
+    2.55
+   ],
+   [
+    193.6,
+    19.0,
+    2.55
+   ],
+   [
+    285.55,
+    24.5,
+    2.5
+   ]
+  ]
+ },
+ "linea": {
+  "x0": 46.9,
+  "y0": 44.992247323547154,
+  "x1": 295.0,
+  "y1": 67.30872758154501,
+  "grosor": 1.3,
+  "pendiente": 0.08994953751712155
+ },
+ "arcos": [
+  {
+   "parametros": {
+    "xl": 46.989,
+    "w": 10.791,
+    "yb_izq": 79.447,
+    "yb_der": 77.939,
+    "x_punta": 72.61,
+    "y_punta": 54.655,
+    "y_arranque_ext": 70.208,
+    "y_arranque_int": 78.625,
+    "grueso_punta": 1.175
+   },
+   "iou": 0.8908
+  },
+  {
+   "parametros": {
+    "xl": 93.704,
+    "w": 11.611,
+    "yb_izq": 89.201,
+    "yb_der": 88.019,
+    "x_punta": 119.686,
+    "y_punta": 61.286,
+    "y_arranque_ext": 78.575,
+    "y_arranque_int": 85.806,
+    "grueso_punta": 1.217
+   },
+   "iou": 0.9154
+  },
+  {
+   "parametros": {
+    "xl": 143.809,
+    "w": 10.996,
+    "yb_izq": 109.833,
+    "yb_der": 108.526,
+    "x_punta": 171.454,
+    "y_punta": 67.49,
+    "y_arranque_ext": 89.638,
+    "y_arranque_int": 90.946,
+    "grueso_punta": 1.329
+   },
+   "iou": 0.938
+  },
+  {
+   "parametros": {
+    "xl": 199.785,
+    "w": 11.758,
+    "yb_izq": 139.019,
+    "yb_der": 137.339,
+    "x_punta": 229.383,
+    "y_punta": 74.699,
+    "y_arranque_ext": 97.089,
+    "y_arranque_int": 100.832,
+    "grueso_punta": 1.316
+   },
+   "iou": 0.955
+  },
+  {
+   "parametros": {
+    "xl": 264.321,
+    "w": 10.574,
+    "yb_izq": 109.825,
+    "yb_der": 108.689,
+    "x_punta": 292.751,
+    "y_punta": 81.731,
+    "y_arranque_ext": 102.561,
+    "y_arranque_int": 106.658,
+    "grueso_punta": 1.29
+   },
+   "iou": 0.935
+  }
+ ],
+ "arcos_svg": "marca/arcos.svg está desplazado (-44, -42) respecto al logo",
+ "pola_de_lena": {
+  "x0": 233,
+  "x1": 296,
+  "y0": 40,
+  "y1": 49
+ }
+}

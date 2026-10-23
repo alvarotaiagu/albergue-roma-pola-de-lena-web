@@ -1,0 +1,32 @@
+<a class="saltar" href="#principal">Saltar al contenido</a>
+
+<!-- ============ cabecera fija: el logo (vectorizado), las cinco paradas, el teléfono y los cinco arcos de lectura ============ -->
+<header class="cab" id="cab">
+  <div class="cab__in">
+    <a class="marca" href="./" aria-label="Albergue Roma, Pola de Lena: a la portada">
+      <!--svg:marca/logo.svg|clase=marca__logo|viewBox=0 5 298 45|quitar=logo-puente,logo-lugar-->
+    </a>
+    <nav class="cab__nav" aria-label="Principal">
+      <a href="#habitaciones" data-arco="1">Habitaciones</a>
+      <a href="#hay" data-arco="2">Lo que hay</a>
+      <a href="#bajada" data-arco="3">La bajada</a>
+      <a href="#lena" data-arco="4">Lena</a>
+      <a href="#reservar" data-arco="5">Reservar</a>
+    </nav>
+    <!-- los cinco arcos del logo: se rellenan al leer cada sección -->
+    <!--svg:marca/arcos.svg|clase=lectura|id=lectura-->
+    <a class="cab__tel" href="tel:+34677856645"><span class="vh">Teléfono: </span>677 856 645</a>
+    <button class="cab__menu" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu-movil"><span class="vh">Menú</span><i></i><i></i></button>
+  </div>
+  <div class="menu-movil" id="menu-movil" aria-hidden="true">
+    <nav aria-label="Menú">
+      <a href="#habitaciones"><small>Cada puerta, un pueblo de Lena</small>Habitaciones</a>
+      <a href="#hay"><small>Cocina, lavadora, taquillas, bicis</small>Lo que hay</a>
+      <a href="#bajada"><small>Del puerto de Pajares a tu litera</small>La bajada</a>
+      <a href="#lena"><small>Santa Cristina, el río, Herías</small>Lena</a>
+      <a href="#reservar"><small>Camas libres, noche a noche</small>Reservar</a>
+      <a href="#llegar"><small>C/ Canuto Hevia, 12 · La Pola</small>Cómo llegar</a>
+    </nav>
+    <p class="menu-movil__tel"><a href="tel:+34677856645">677 856 645</a></p>
+  </div>
+</header>
